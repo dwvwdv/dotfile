@@ -11,12 +11,19 @@ function imap(shortcut, command)
 	map('i', shortcut, command)
 end
 
--- 檔案編碼一致
+function tmap(shortcut, command)
+	map('t', shortcut, command)
+end
+
+-- Modify  Leader Key 
+vim.g.mapleader = ' '
+
+-- Control File Enconding
 vim.o.encoding='utf-8'
 vim.o.termencoding='utf-8'
 vim.o.fileencoding='utf-8'
 
--- 基礎設定
+-- Basic Setting
 vim.o.nu = true
 vim.o.rnu = true
 vim.o.cursorline = true
@@ -28,14 +35,14 @@ vim.o.incsearch = true
 vim.o.sidescroll=1
 -- vim.o.cmdheight=0
 
--- 縮排與tab鍵一致
+-- Tab Indent
 vim.o.tabstop=4
 vim.o.shiftwidth=4
 
--- 目錄自動切換
+-- Auto Switch Directory
 vim.o.autochdir = true
 
--- 括號補全
+-- Auto Complete Quote
 imap("(","()<Left>")
 imap("[","[]<Left>")
 --imap("<","<><Esc>i")
@@ -43,35 +50,43 @@ imap("{<CR>","{}<Left><CR><CR><Up><TAB>")
 imap("\"","\"\"<Left>")
 imap("'","''<Left>")
 
--- 取消查找與快速移動
+-- Quick Move
 nmap("<SPACE><CR>",":nohlsearch<CR>")
 nmap("<SPACE>j","20jzz")
 nmap("<SPACE>k","20kzz")
 
--- vimrc配置修改與載入
+-- Neovim Config Modify
 nmap("<F8>",":tabe<CR>:e $MYVIMRC<CR>")
 nmap("<F9>",":tabe<CR>:e C:\\Users\\user\\vimfiles\\coc-config.vim<CR>")
 nmap("R",":Lazy<CR>")
 
--- 基礎鍵修改
+-- Defalut Key Config Modify
 nmap("s","<nop>")
 nmap("t","<nop>")
+nmap("T","<nop>")
+nmap("W","5w")
 nmap("S",":w<CR>")
 nmap("Q",":q<CR>")
 
--- 視窗分割
+-- Tarminal Defalut Config Modify
+tmap("<Esc>","<C-\\><C-n>")
+
+-- Window Split
 nmap("sh",":set nosplitright<CR>:vsplit<CR>")
 nmap("sl",":set splitright<CR>:vsplit<CR>")
 nmap("sj",":set splitbelow<CR>:split<CR>")
 nmap("sk",":set nosplitbelow<CR>:split<CR>")
 
--- 依賴於sh: sj sk sl映射的map
+-- open vim explorer
 nmap("sd","sh:Ex<CR>:vertical resize -15<CR>")
 
--- 分頁切換
+-- Tab Switch
 nmap("st",":tabe<CR>")
 nmap("sp",":-tabnext<CR>")
 nmap("sn",":+tabnext<CR>")
+
+-- Pin Tab
+nmap("tt",":tabm 0<CR>")
 
 -- Buffer Switch
 nmap("<A-j>",":bnext<CR>")
@@ -80,47 +95,34 @@ nmap("<A-h>",":bfirst<CR>")
 nmap("<A-l>",":blast<CR>")
 nmap("<A-c>",":%bd|e#<CR>")
 
--- Pin Buffer
-nmap("tt",":tabm 0<CR>")
-
--- 自動縮排
+-- Auto Indent
 nmap("!","gg=G``")
 
--- terminal與編譯
+-- Terminal and Compiler
 nmap("tl :vim.o.splitbelow<CR> :terminal","++rows=7<CR>")
 nmap("<F5>",":call CompileRunGcc()<CR>")
 nmap("<F6>",":!cls<CR><CR>:call SSHCompileRunGcc()<CR>")
 
+-- Move Code
+map("n", "<C-J>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+map("n", "<C-K>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+map("i", "<C-J>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
+map("i", "<C-K>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
+map("v", "<C-J>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+map("v", "<C-K>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+
 vim.cmd([[
-" 外部剪貼簿設定 
+" Clipboard Linked 
 set clipboard=unnamed 
-" backspace work 
+" Backspace Work 
 set backspace=indent,eol,start
-"進入點改為上次離開位置
+" Last Edit Locatoin
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-" 檔案判斷自動縮排與語法高亮
+" File Hightligt Code
 filetype indent on
 syntax on
 exec "nohlsearch"
 let g:python3_host_prog = 'C:\Users\user\AppData\Local\Programs\Python\Python311\python'
-
-func! SSHCompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!gcc % -o %<"
-	elseif &filetype == 'cpp'
-		exec "! g++ % -o %< && %<"
-	elseif &filetype == 'java'
-		exec "!javac %"
-		exec "!time java %<"
-	elseif &filetype == 'sh'
-		:!time bash %
-	elseif &filetype == 'python'
-		# exec "! python %"
-	elseif &filetype == 'html'
-		exec "! chrome % &"
-	endif
-endfunc
 
 func! CompileRunGcc()
 	exec "w"
@@ -139,9 +141,9 @@ func! CompileRunGcc()
 		exec "! chrome % &"
 	endif
 endfunc
-
-"so $HOME\vimfiles\plugConfig\toggle.vim
 ]])
+
+----------------------------- Plugin --------------------------------
 
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -246,8 +248,8 @@ require("neo-tree").setup({
             ["<esc>"] = "revert_preview",
             ["P"] = { "toggle_preview", config = { use_float = true } },
             ["l"] = "focus_preview",
-            ["S"] = "open_split",
-            ["s"] = "open_vsplit",
+            [","] = "open_split",
+            ["."] = "open_vsplit",
             -- ["S"] = "split_with_window_picker",
             -- ["s"] = "vsplit_with_window_picker",
             ["t"] = "open_tabnew",
@@ -376,14 +378,31 @@ require("neo-tree").setup({
         }
       })
 
+
 vim.cmd([[
 	color nord
+	"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=white guibg=darkred guifg=white
 	so C:\Users\user\AppData\Local\nvim\config\coc-config.vim
 	so C:\Users\user\AppData\Local\nvim\config\floatTerm-config.vim
 ]])
 
 
+-- floatTerm plugins
 nmap("tl",":FloatermNew<CR>")
+-- lazygit plugins
 nmap("<SPACE>gg",":LazyGit<CR>")
-nmap("sd",":Neotree position=right<CR>")
+-- neotree plugins
+nmap("T",":NeoTreeFocusToggle<CR>")
+-- MarkdownPreview plugins
 nmap("<SPACE>m","<Plug>MarkdownPreview")
+nmap("<A-b>",":lua require('buffer_manager.ui').toggle_quick_menu()<CR>")
+
+-- telescope plugins
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
+vim.keymap.set('n', '<leader>fo', builtin.loclist, {})
+vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})
