@@ -19,7 +19,7 @@ end
 vim.g.mapleader = ' '
 
 -- Control File Enconding
-vim.o.encoding='utf-8'
+-- vim.o.encoding='utf-8'
 vim.o.termencoding='utf-8'
 vim.o.fileencoding='utf-8'
 
@@ -64,12 +64,13 @@ nmap("R",":Lazy<CR>")
 nmap("s","<nop>")
 nmap("t","<nop>")
 nmap("T","<nop>")
+nmap("K","<nop>")
 nmap("W","5w")
 nmap("S",":w<CR>")
 nmap("Q",":q<CR>")
 
 -- Tarminal Defalut Config Modify
-tmap("<Esc>","<C-\\><C-n>")
+tmap("<A-s>","<C-\\><C-n>")
 
 -- Window Split
 nmap("sh",":set nosplitright<CR>:vsplit<CR>")
@@ -82,8 +83,8 @@ nmap("sd","sh:Ex<CR>:vertical resize -15<CR>")
 
 -- Tab Switch
 nmap("st",":tabe<CR>")
-nmap("sp",":-tabnext<CR>")
-nmap("sn",":+tabnext<CR>")
+nmap("sp","gT")
+nmap("sn","gt")
 
 -- Pin Tab
 nmap("tt",":tabm 0<CR>")
@@ -386,18 +387,17 @@ vim.cmd([[
 	so C:\Users\user\AppData\Local\nvim\config\floatTerm-config.vim
 ]])
 
-
--- floatTerm plugins
+-- floatTerm plugin
 nmap("tl",":FloatermNew<CR>")
--- lazygit plugins
+-- lazygit plugin
 nmap("<SPACE>gg",":LazyGit<CR>")
--- neotree plugins
+-- neotree plugin
 nmap("T",":NeoTreeFocusToggle<CR>")
--- MarkdownPreview plugins
+nmap("\\",":cd ~<CR>")
+-- MarkdownPreview plugin
 nmap("<SPACE>m","<Plug>MarkdownPreview")
-nmap("<A-b>",":lua require('buffer_manager.ui').toggle_quick_menu()<CR>")
 
--- telescope plugins
+-- telescope plugin
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
@@ -406,3 +406,162 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
 vim.keymap.set('n', '<leader>fo', builtin.loclist, {})
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})
+
+-- leap plugin
+require('leap').add_default_mappings()
+nmap('ss','<Plug>(leap-forward-to)')
+nmap('sd','<Plug>(leap-backward-to)')
+
+-- indent-blankline plugin
+vim.opt.termguicolors = true
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+require("indent_blankline").setup {
+	space_char_blankline = " ",
+	char_highlight_list = {
+		"IndentBlanklineIndent1",
+		"IndentBlanklineIndent2",
+		"IndentBlanklineIndent3",
+		"IndentBlanklineIndent4",
+		"IndentBlanklineIndent5",
+		"IndentBlanklineIndent6",
+	},
+}
+
+-- gitsigns plugin
+require('gitsigns').setup {
+  signs = {
+    add          = { text = '│' },
+    change       = { text = '│' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
+  },
+  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  watch_gitdir = {
+    interval = 1000,
+    follow_files = true
+  },
+  attach_to_untracked = true,
+  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  current_line_blame_opts = {
+    virt_text = true,
+    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+    delay = 1000,
+    ignore_whitespace = false,
+  },
+  current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+  sign_priority = 6,
+  update_debounce = 100,
+  status_formatter = nil, -- Use default
+  max_file_length = 40000, -- Disable if file is longer than this (in lines)
+  preview_config = {
+    -- Options passed to nvim_open_win
+    border = 'single',
+    style = 'minimal',
+    relative = 'cursor',
+    row = 0,
+    col = 1
+  },
+  yadm = {
+    enable = false
+  },
+on_attach = function(bufnr)
+    local gs = package.loaded.gitsigns
+
+    local function map(mode, l, r, opts)
+      opts = opts or {}
+      opts.buffer = bufnr
+      vim.keymap.set(mode, l, r, opts)
+    end
+
+    -- Navigation
+    map('n', ']c', function()
+      if vim.wo.diff then return ']c' end
+      vim.schedule(function() gs.next_hunk() end)
+      return '<Ignore>'
+    end, {expr=true})
+
+    map('n', '[c', function()
+      if vim.wo.diff then return '[c' end
+      vim.schedule(function() gs.prev_hunk() end)
+      return '<Ignore>'
+    end, {expr=true})
+
+    -- Actions
+    -- map('n', '<leader>hs', gs.stage_hunk)
+    -- map('n', '<leader>hr', gs.reset_hunk)
+    -- map('v', '<leader>hs', function() gs.stage_hunk {vim.fn.line("."), vim.fn.line("v")} end)
+    -- map('v', '<leader>hr', function() gs.reset_hunk {vim.fn.line("."), vim.fn.line("v")} end)
+    -- map('n', '<leader>hS', gs.stage_buffer)
+    -- map('n', '<leader>hu', gs.undo_stage_hunk)
+    -- map('n', '<leader>hR', gs.reset_buffer)
+    map('n', '<leader>hp', gs.preview_hunk)
+    map('n', '<leader>hb', function() gs.blame_line{full=true} end)
+    map('n', '<leader>tb', gs.toggle_current_line_blame)
+    map('n', '<leader>hd', gs.diffthis)
+    map('n', '<leader>hD', function() gs.diffthis('~') end)
+    map('n', '<leader>td', gs.toggle_deleted)
+
+    -- Text object
+    map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+  end
+}
+
+-- nvim-treesitter plugin
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all" (the five listed parsers should always be installed)
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query" , "python", "go", "json" },
+
+  -- -- Install parsers synchronously (only applied to `ensure_installed`)
+  -- sync_install = false,
+
+  -- -- Automatically install missing parsers when entering buffer
+  -- -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  -- auto_install = true,
+
+  -- -- List of parsers to ignore installing (for "all")
+  -- ignore_install = { "jabascript" },
+
+  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+  highlight = {
+    enable = true,
+
+    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+    -- the name of the parser)
+    -- list of language that will be disabled
+    disable = {},
+    -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
+    -- disable = function(lang, buf)
+    --     local max_filesize = 100 * 1024 -- 100 KB
+    --     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+    --     if ok and stats and stats.size > max_filesize then
+    --         return true
+    --     end
+    -- end,
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+  indent = {
+    enable = true
+  }
+}
+
