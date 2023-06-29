@@ -1,3 +1,4 @@
 return {
-	'ggandor/leap.nvim'
+	'ggandor/leap.nvim',
+	event = "VeryLazy",
 }

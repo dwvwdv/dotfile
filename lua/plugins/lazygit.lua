@@ -1,3 +1,4 @@
 return{
-	'kdheepak/lazygit.nvim'
+	'kdheepak/lazygit.nvim',
+	event = "VeryLazy",
 }

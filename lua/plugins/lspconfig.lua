@@ -1,4 +1,4 @@
 return{
-	'voldikss/vim-floaterm',
+	'neovim/nvim-lspconfig',
 	event = "VeryLazy",
 }
