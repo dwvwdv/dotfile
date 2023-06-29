@@ -144,6 +144,7 @@ endfunc
 ]])
 
 ----------------------------- Plugin --------------------------------
+local range = 20
 
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -160,6 +161,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({{import = "plugins"}})
 
+-- neotree plugin
 require("neo-tree").setup({
 	close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 	popup_border_style = "rounded",
@@ -776,8 +778,8 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
-		{ name = 'vsnip' }, -- For vsnip users.
-		-- { name = 'luasnip' }, -- For luasnip users.
+		-- { name = 'vsnip' }, -- For vsnip users.
+		{ name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
 		}, {
