@@ -738,81 +738,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
 		vim.keymap.set('n', '<space>wl', function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-		end, opts)
+			end, opts)
 		vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
 		vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 		vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
 		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 		vim.keymap.set('n', '<space>f', function()
 			vim.lsp.buf.format { async = true }
-		end, opts)
+			end, opts)
 	end,
 })
 
 -- cmp plugin
--- Set up nvim-cmp.
-local cmp = require'cmp'
-
-cmp.setup({
-	snippet = {
-		-- REQUIRED - you must specify a snippet engine
-		expand = function(args)
-			-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-		end,
-	},
-	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
-	},
-	mapping = cmp.mapping.preset.insert({
-		['<Tab>'] = cmp.mapping.select_next_item(),
-		['<S-Tab>'] = cmp.mapping.select_prev_item(),
-		['<C-b>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<C-e>'] = cmp.mapping.abort(),
-		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-	}),
-	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		-- { name = 'vsnip' }, -- For vsnip users.
-		{ name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
-		}, {
-			{ name = 'buffer' },
-	})
-})
-
--- Set configuration for specific filetype.
-cmp.setup.filetype('gitcommit', {
-	sources = cmp.config.sources({
-		{ name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
-		}, {
-			{ name = 'buffer' },
-	})
-})
-
--- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline({ '/', '?' }, {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' }
-	}
-})
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({
-		{ name = 'path' }
-		}, {
-			{ name = 'cmdline' }
-	})
-})
 
 -- lsp-setup plugin 
 require('lsp-setup').setup({
@@ -848,70 +785,71 @@ require("mason-lspconfig").setup{
 
 -- symbols-outline plugin
 local symbols_outline_opts = {
-  highlight_hovered_item = true,
-  show_guides = true,
-  auto_preview = false,
-  position = 'right',
-  relative_width = true,
-  width = 25,
-  auto_close = false,
-  show_numbers = false,
-  show_relative_numbers = false,
-  show_symbol_details = true,
-  preview_bg_highlight = 'Pmenu',
-  autofold_depth = nil,
-  auto_unfold_hover = true,
-  fold_markers = { '', '' },
-  wrap = false,
-  keymaps = { -- These keymaps can be a string or a table for multiple keys
-    close = {"<Esc>", "q"},
-    goto_location = "<CR>",
-    focus_location = "o",
-    hover_symbol = "p",
-    toggle_preview = "K",
-    rename_symbol = "r",
-    code_actions = "a",
-    fold = "h",
-    unfold = "l",
-    fold_all = "W",
-    unfold_all = "E",
-    fold_reset = "R",
-  },
-  lsp_blacklist = {},
-  symbol_blacklist = {},
-  symbols = {
-    File = { icon = "", hl = "@text.uri" },
-    Module = { icon = "", hl = "@namespace" },
-    Namespace = { icon = "", hl = "@namespace" },
-    Package = { icon = "", hl = "@namespace" },
-    Class = { icon = "𝓒", hl = "@type" },
-    Method = { icon = "ƒ", hl = "@method" },
-    Property = { icon = "", hl = "@method" },
-    Field = { icon = "", hl = "@field" },
-    Constructor = { icon = "", hl = "@constructor" },
-    Enum = { icon = "ℰ", hl = "@type" },
-    Interface = { icon = "ﰮ", hl = "@type" },
-    Function = { icon = "", hl = "@function" },
-    Variable = { icon = "", hl = "@constant" },
-    Constant = { icon = "", hl = "@constant" },
-    String = { icon = "𝓐", hl = "@string" },
-    Number = { icon = "#", hl = "@number" },
-    Boolean = { icon = "⊨", hl = "@boolean" },
-    Array = { icon = "", hl = "@constant" },
-    Object = { icon = "⦿", hl = "@type" },
-    Key = { icon = "🔐", hl = "@type" },
-    Null = { icon = "NULL", hl = "@type" },
-    EnumMember = { icon = "", hl = "@field" },
-    Struct = { icon = "𝓢", hl = "@type" },
-    Event = { icon = "🗲", hl = "@type" },
-    Operator = { icon = "+", hl = "@operator" },
-    TypeParameter = { icon = "𝙏", hl = "@parameter" },
-    Component = { icon = "", hl = "@function" },
-    Fragment = { icon = "", hl = "@constant" },
-  },
+	highlight_hovered_item = true,
+	show_guides = true,
+	auto_preview = false,
+	position = 'right',
+	relative_width = true,
+	width = 25,
+	auto_close = false,
+	show_numbers = false,
+	show_relative_numbers = false,
+	show_symbol_details = true,
+	preview_bg_highlight = 'Pmenu',
+	autofold_depth = nil,
+	auto_unfold_hover = true,
+	fold_markers = { '', '' },
+	wrap = false,
+	keymaps = { -- These keymaps can be a string or a table for multiple keys
+		close = {"<Esc>", "q"},
+		goto_location = "<CR>",
+		focus_location = "o",
+		hover_symbol = "p",
+		toggle_preview = "K",
+		rename_symbol = "r",
+		code_actions = "a",
+		fold = "h",
+		unfold = "l",
+		fold_all = "W",
+		unfold_all = "E",
+		fold_reset = "R",
+	},
+	lsp_blacklist = {},
+	symbol_blacklist = {},
+	symbols = {
+		File = { icon = "", hl = "@text.uri" },
+		Module = { icon = "", hl = "@namespace" },
+		Namespace = { icon = "", hl = "@namespace" },
+		Package = { icon = "", hl = "@namespace" },
+		Class = { icon = "𝓒", hl = "@type" },
+		Method = { icon = "ƒ", hl = "@method" },
+		Property = { icon = "", hl = "@method" },
+		Field = { icon = "", hl = "@field" },
+		Constructor = { icon = "", hl = "@constructor" },
+		Enum = { icon = "ℰ", hl = "@type" },
+		Interface = { icon = "ﰮ", hl = "@type" },
+		Function = { icon = "", hl = "@function" },
+		Variable = { icon = "", hl = "@constant" },
+		Constant = { icon = "", hl = "@constant" },
+		String = { icon = "𝓐", hl = "@string" },
+		Number = { icon = "#", hl = "@number" },
+		Boolean = { icon = "⊨", hl = "@boolean" },
+		Array = { icon = "", hl = "@constant" },
+		Object = { icon = "⦿", hl = "@type" },
+		Key = { icon = "🔐", hl = "@type" },
+		Null = { icon = "NULL", hl = "@type" },
+		EnumMember = { icon = "", hl = "@field" },
+		Struct = { icon = "𝓢", hl = "@type" },
+		Event = { icon = "🗲", hl = "@type" },
+		Operator = { icon = "+", hl = "@operator" },
+		TypeParameter = { icon = "𝙏", hl = "@parameter" },
+		Component = { icon = "", hl = "@function" },
+		Fragment = { icon = "", hl = "@constant" },
+	},
 }
 require("symbols-outline").setup(symbols_outline_opts)
 nmap("sy",":SymbolsOutline<CR>")
+
 
 -- -- nvim-dap plugin
 -- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr})
