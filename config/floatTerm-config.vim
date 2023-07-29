@@ -15,6 +15,8 @@ func! CompileRunGcc()
 		exec "! chrome % &"
 	elseif &filetype == 'go'
 		:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 go run %
+	elseif &filetype == 'dart'
+		:FlutterRun
 	endif
 endfunc
 

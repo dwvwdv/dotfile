@@ -1,3 +1,12 @@
+if(vim.loop.os_uname().sysname == 'Windows_NT')
+then
+	vim.cmd([[
+	set shell=powershell
+	set shellcmdflag=-command
+	set shellquote=\"
+	set shellxquote=
+	]])
+end
 
 function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
@@ -36,8 +45,8 @@ vim.o.sidescroll=1
 -- vim.o.cmdheight=0
 
 -- Tab Indent
-vim.o.tabstop=4
-vim.o.shiftwidth=4
+vim.o.tabstop=2
+vim.o.shiftwidth=2
 
 -- Auto Switch Directory
 vim.o.autochdir = true
@@ -72,18 +81,18 @@ nmap("Q",":q<CR>")
 tmap("<A-s>","<C-\\><C-n>")
 
 -- Window Split
-nmap("sh",":set nosplitright<CR>:vsplit<CR>")
-nmap("sl",":set splitright<CR>:vsplit<CR>")
-nmap("sj",":set splitbelow<CR>:split<CR>")
-nmap("sk",":set nosplitbelow<CR>:split<CR>")
+nmap("<Tab>sh",":set nosplitright<CR>:vsplit<CR>")
+nmap("<Tab>sl",":set splitright<CR>:vsplit<CR>")
+nmap("<Tab>sj",":set splitbelow<CR>:split<CR>")
+nmap("<Tab>sk",":set nosplitbelow<CR>:split<CR>")
+nmap("<A-->",":resize -1<CR>")
+nmap("<A-=>",":resize +2<CR>")
 
--- open vim explorer
-nmap("sd","sh:Ex<CR>:vertical resize -15<CR>")
-
--- Tab Switch
-nmap("st",":tabe<CR>")
-nmap("sp","gT")
-nmap("sn","gt")
+-- Tab Swit<space>h
+nmap("<Tab>t",":tabe<CR>")
+nmap("<Tab>p","gT")
+nmap("<Tab>n","gt")
+nmap("<A-n>","<C-w><C-w>")
 
 -- Pin Tab
 nmap("tt",":tabm 0<CR>")
@@ -383,8 +392,6 @@ require("neo-tree").setup({
 
 vim.cmd([[
 	color nord
-	"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=white guibg=darkred guifg=white
-	"so C:\Users\user\AppData\Local\nvim\config\coc-config.vim
 	so C:\Users\user\AppData\Local\nvim\config\floatTerm-config.vim
 ]])
 
@@ -738,14 +745,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
 		vim.keymap.set('n', '<space>wl', function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-			end, opts)
+		end, opts)
 		vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
 		vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 		vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
 		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 		vim.keymap.set('n', '<space>f', function()
 			vim.lsp.buf.format { async = true }
-			end, opts)
+		end, opts)
 	end,
 })
 
@@ -848,8 +855,9 @@ local symbols_outline_opts = {
 	},
 }
 require("symbols-outline").setup(symbols_outline_opts)
-nmap("sy",":SymbolsOutline<CR>")
+nmap("<Tab>ol",":SymbolsOutline<CR>")
 
+nmap("<F2>",":FlutterEmulators<CR>")
 
 -- -- nvim-dap plugin
 -- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr})
