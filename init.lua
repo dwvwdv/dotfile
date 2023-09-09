@@ -1,4 +1,4 @@
-if(vim.loop.os_uname().sysname == 'Windows_NT')
+if (vim.loop.os_uname().sysname == 'Windows_NT')
 then
 	vim.cmd([[
 	set shell=powershell
@@ -24,13 +24,13 @@ function tmap(shortcut, command)
 	map('t', shortcut, command)
 end
 
--- Modify  Leader Key 
+-- Modify  Leader Key
 vim.g.mapleader = ' '
 
 -- Control File Enconding
 -- vim.o.encoding='utf-8'
-vim.o.termencoding='utf-8'
-vim.o.fileencoding='utf-8'
+vim.o.termencoding = 'utf-8'
+vim.o.fileencoding = 'utf-8'
 
 -- Basic Setting
 vim.o.nu = true
@@ -41,12 +41,12 @@ vim.o.showcmd = true
 vim.o.wildmenu = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
-vim.o.sidescroll=1
+vim.o.sidescroll = 1
 -- vim.o.cmdheight=0
 
 -- Tab Indent
-vim.o.tabstop=2
-vim.o.shiftwidth=2
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
 -- Auto Switch Directory
 vim.o.autochdir = true
@@ -60,70 +60,78 @@ vim.o.autochdir = true
 -- imap("'","''<Left>")
 
 -- Quick Move
-nmap("<SPACE><CR>",":nohlsearch<CR>")
-nmap("<SPACE>j","20jzz")
-nmap("<SPACE>k","20kzz")
+nmap("<SPACE><CR>", ":nohlsearch<CR>")
+nmap("<SPACE>j", "20jzz")
+nmap("<SPACE>k", "20kzz")
 
 -- Neovim Config Modify
-nmap("<F8>",":tabe<CR>:e $MYVIMRC<CR>")
-nmap("R",":Lazy<CR>")
+nmap("<F8>", ":tabe<CR>:e $MYVIMRC<CR>")
+nmap("R", ":Lazy<CR>")
 
 -- Defalut Key Config Modify
-nmap("s","<nop>")
-nmap("t","<nop>")
-nmap("T","<nop>")
-nmap("K","<nop>")
-nmap("W","5w")
-nmap("S",":w<CR>")
-nmap("Q",":q<CR>")
+nmap("s", "<nop>")
+nmap("t", "<nop>")
+nmap("T", "<nop>")
+nmap("K", "<nop>")
+nmap("W", "5w")
+nmap("S", ":w<CR>")
+nmap("Q", ":q<CR>")
 
 -- Tarminal Defalut Config Modify
-tmap("<A-s>","<C-\\><C-n>")
+tmap("<A-s>", "<C-\\><C-n>")
 
 -- Window Split
-nmap("<Tab>sh",":set nosplitright<CR>:vsplit<CR>")
-nmap("<Tab>sl",":set splitright<CR>:vsplit<CR>")
-nmap("<Tab>sj",":set splitbelow<CR>:split<CR>")
-nmap("<Tab>sk",":set nosplitbelow<CR>:split<CR>")
-nmap("<A-->",":resize -1<CR>")
-nmap("<A-=>",":resize +2<CR>")
+nmap("<Tab>sh", ":set nosplitright<CR>:vsplit<CR>")
+nmap("<Tab>sl", ":set splitright<CR>:vsplit<CR>")
+nmap("<Tab>sj", ":set splitbelow<CR>:split<CR>")
+nmap("<Tab>sk", ":set nosplitbelow<CR>:split<CR>")
+nmap("<A-->", ":resize -1<CR>")
+nmap("<A-=>", ":resize +2<CR>")
 
 -- Tab Swit<space>h
-nmap("<Tab>t",":tabe<CR>")
-nmap("<Tab>p","gT")
-nmap("<Tab>n","gt")
-nmap("<A-n>","<C-w><C-w>")
+nmap("<Tab>t", ":tabe<CR>")
+nmap("<Tab>p", "gT")
+nmap("<Tab>n", "gt")
+nmap("<A-n>", "<C-w><C-w>")
 
 -- Pin Tab
-nmap("tt",":tabm 0<CR>")
+nmap("tt", ":tabm 0<CR>")
 
 -- Buffer Switch
-nmap("<A-j>",":bnext<CR>")
-nmap("<A-k>",":bprevious<CR>")
-nmap("<A-h>",":bfirst<CR>")
-nmap("<A-l>",":blast<CR>")
-nmap("<A-c>",":%bd|e#<CR>")
+nmap("<A-j>", ":bnext<CR>")
+nmap("<A-k>", ":bprevious<CR>")
+nmap("<A-h>", ":bfirst<CR>")
+nmap("<A-l>", ":blast<CR>")
+nmap("<A-c>", ":%bd|e#<CR>")
 
 -- Auto Indent
-nmap("!","gg=G``")
+nmap("!", "gg=G``")
 
 -- Terminal and Compiler
-nmap("tl :vim.o.splitbelow<CR> :terminal","++rows=7<CR>")
-nmap("<F5>",":call CompileRunGcc()<CR>")
-nmap("<F6>",":!cls<CR><CR>:call SSHCompileRunGcc()<CR>")
+nmap("tl :vim.o.splitbelow<CR> :terminal", "++rows=7<CR>")
+nmap("<F5>", ":call CompileRunGcc()<CR>")
+nmap("<F6>", ":!cls<CR><CR>:call SSHCompileRunGcc()<CR>")
 
 -- Move Code
-map("n", "<C-J>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-map("n", "<C-K>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-map("i", "<C-J>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-map("i", "<C-K>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-map("v", "<C-J>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-map("v", "<C-K>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+map("n", "<C-J>", "<cmd>m .+1<cr>==")
+map("n", "<C-K>", "<cmd>m .-2<cr>==")
+map("i", "<C-J>", "<esc><cmd>m .+1<cr>==gi")
+map("i", "<C-K>", "<esc><cmd>m .-2<cr>==gi")
+map("v", "<C-J>", ":m '>+1<cr>gv=gv")
+map("v", "<C-K>", ":m '<-2<cr>gv=gv")
 
+-- Session Control
+map("n", "<Tab>ses", ":mks! ~/session/")
+map("n", "<Tab>sel", ":source ~/session/")
+
+-- Initial pwd
+nmap("\\", ":cd ~<CR>")
+
+-- Vim Script
 vim.cmd([[
-" Clipboard Linked 
-set clipboard=unnamed 
-" Backspace Work 
+" Clipboard Linked
+set clipboard=unnamed
+" Backspace Work
 set backspace=indent,eol,start
 " Last Edit Locatoin
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -168,13 +176,13 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup({{import = "plugins"}})
+require("lazy").setup({ {
+	import = "plugins",
+} })
 
--- neotree plugin
-
+-- Compiler
 
 vim.cmd([[
-	color nord
 	func! CompileRunGcc()
 	exec "w"
 	if &filetype == 'c'
@@ -200,49 +208,21 @@ vim.cmd([[
 ]])
 
 -- floatTerm plugin
-nmap("tl",":FloatermNew<CR>")
+nmap("tl", ":FloatermNew<CR>")
 -- lazygit plugin
-nmap("<SPACE>gg",":LazyGit<CR>")
--- neotree plugin
-nmap("<SPACE>t",":NeoTreeFocusToggle<CR>")
-nmap("\\",":cd ~<CR>")
+nmap("<SPACE>gg", ":LazyGit<CR>")
 -- MarkdownPreview plugin
-nmap("<SPACE>m","<Plug>MarkdownPreview")
-
--- telescope plugin
-
--- leap plugin
--- require('leap').add_default_mappings()
--- nmap('ss','<Plug>(leap-forward-to)')
--- nmap('sd','<Plug>(leap-backward-to)')
-
-
--- indent-blankline plugin
-
--- gitsigns plugin
-
--- nvim-treesitter plugin
-
+nmap("<SPACE>m", "<Plug>MarkdownPreview")
 -- ChatGPT plugin
-nmap('<SPACE>ai',':ChatGPT<CR>')
-nmap('<SPACE>ae',':ChatGPTEditWithInstructions<CR>')
-nmap('<SPACE>ac',':ChatGPTCompleteCode<CR>')
-
--- lspconfig plugin
-
--- cmp plugin
-
--- lsp-setup plugin 
-
+nmap('<SPACE>ai', ':ChatGPT<CR>')
+nmap('<SPACE>ae', ':ChatGPTEditWithInstructions<CR>')
+nmap('<SPACE>ac', ':ChatGPTCompleteCode<CR>')
 -- mason plugin
-nmap("tr",":Mason<CR>")
-
--- mason-lspconfig plugin
-
+nmap("tr", ":Mason<CR>")
 -- symbols-outline plugin
-nmap("<Tab>ol",":SymbolsOutline<CR>")
-
-nmap("<F2>",":FlutterEmulators<CR>")
+nmap("<Tab>ol", ":SymbolsOutline<CR>")
+-- flutter plugin
+nmap("<F2>", ":FlutterEmulators<CR>")
 
 -- -- nvim-dap plugin
 -- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr})
@@ -250,9 +230,9 @@ nmap("<F2>",":FlutterEmulators<CR>")
 -- vim.keymap.set({"i", "n", "v"}, "<F11>", "<cmd>lua require'dap'.step_into()<CR>", {silent = true, noremap = true, buffer = bufnr})
 -- vim.keymap.set({"i", "n", "v"}, "<F12>", "<cmd>lua require'dap'.step_over()<CR>", {silent = true, noremap = true, buffer = bufnr})
 -- vim.keymap.set({"i", "n", "v"}, "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", {silent = true, noremap = true, buffer = bufnr})
--- 
+--
 -- require('dap/python')
--- 
+--
 -- local dap = require('dap')
 -- dap.configurations.python = {
 --   {

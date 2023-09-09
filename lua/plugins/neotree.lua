@@ -6,6 +6,9 @@ return{
 		"MunifTanjim/nui.nvim",
 	},
 	event = "VeryLazy",
+	keys = {
+		{ "<leader>ft", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+	},
 	config = function()
 		require("neo-tree").setup({
 			close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
@@ -222,7 +225,7 @@ return{
 						["gg"] = "git_commit_and_push",
 					}
 				}
-			}
+			},
 		})
 	end
 }
