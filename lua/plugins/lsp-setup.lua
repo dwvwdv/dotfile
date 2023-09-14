@@ -23,12 +23,12 @@ return {
 				tsserver = {
 					capabilities = capabilities
 				},
-				html = {
-					capabilities = capabilities
-				},
-				lua_ls = {
-					capabilities = capabilities
-				},
+				-- html = {
+				-- 	capabilities = capabilities
+				-- },
+				-- lua_ls = {
+				-- 	capabilities = capabilities
+				-- },
 			}
 		})
 	end

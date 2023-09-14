@@ -24,7 +24,7 @@ return {
 					-- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
 					-- this will show the currently running device if an application was started with a specific
 					-- device
-					device = false,
+					device = true,
 					-- set to true to be able use the 'flutter_tools_decorations.project_config' in your statusline
 					-- this will show the currently selected project configuration
 					project_config = false,
@@ -75,8 +75,8 @@ return {
 					virtual_text = true, -- show the highlight using virtual text
 					virtual_text_str = "■", -- the virtual text character to highlight
 				},
-				on_attach = my_custom_on_attach,
-				capabilities = my_custom_capabilities, -- e.g. lsp_status capabilities
+				-- on_attach = my_custom_on_attach,
+				-- capabilities = my_custom_capabilities, -- e.g. lsp_status capabilities
 				-- OR you can specify a function to deactivate or change or control how the config is created
 				-- capabilities = function(config)
 				-- 	config.specificThingIDontWant = false

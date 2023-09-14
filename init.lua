@@ -8,19 +8,19 @@ then
 	]])
 end
 
-function map(mode, shortcut, command)
+local function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 end
 
-function nmap(shortcut, command)
+local function nmap(shortcut, command)
 	map('n', shortcut, command)
 end
 
-function imap(shortcut, command)
+local function imap(shortcut, command)
 	map('i', shortcut, command)
 end
 
-function tmap(shortcut, command)
+local function tmap(shortcut, command)
 	map('t', shortcut, command)
 end
 
@@ -32,11 +32,12 @@ vim.g.mapleader = ' '
 vim.o.termencoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
 
+
 -- Basic Setting
 vim.o.nu = true
 vim.o.rnu = true
 vim.o.cursorline = true
-vim.o.wrap = false
+vim.o.wrap = true
 vim.o.showcmd = true
 vim.o.wildmenu = true
 vim.o.hlsearch = true
