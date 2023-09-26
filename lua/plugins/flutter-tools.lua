@@ -1,6 +1,6 @@
 return {
 	'akinsho/flutter-tools.nvim',
-	lazy = false,
+	lazy = true,
 	dependencies = {
 		'nvim-lua/plenary.nvim',
 		'stevearc/dressing.nvim', -- optional for vim.ui.select
@@ -10,7 +10,7 @@ return {
 			ui = {
 				-- the border type to use for all floating windows, the same options/formats
 				-- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
-				border = "rounded",
+				border = "solid",
 				-- This determines whether notifications are show with `vim.notify` or with the plugin's custom UI
 				-- please note that this option is eventually going to be deprecated and users will need to
 				-- depend on plugins like `nvim-notify` instead.
@@ -55,7 +55,7 @@ return {
 			},
 			dev_log = {
 				enabled = true,
-				notify_errors = false, -- if there is an error whilst running then notify the user
+				notify_errors = true, -- if there is an error whilst running then notify the user
 				open_cmd = "belowright split", -- command to use to open the log buffer
 			},
 			dev_tools = {
@@ -85,8 +85,8 @@ return {
 				-- see the link below for details on each option:
 				-- https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md#client-workspace-configuration
 				settings = {
-					showTodos = true,
-					completeFunctionCalls = true,
+					showTodos = false,
+					completeFunctionCalls = false,
 					analysisExcludedFolders = {},
 					renameFilesWithClasses = "prompt", -- "always"
 					enableSnippets = true,

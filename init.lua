@@ -79,7 +79,7 @@ nmap("S", ":w<CR>")
 nmap("Q", ":q<CR>")
 
 -- Tarminal Defalut Config Modify
-tmap("<A-s>", "<C-\\><C-n>")
+tmap("<Esc><Esc>", "<C-\\><C-n>")
 
 -- Window Split
 nmap("<Tab>sh", ":set nosplitright<CR>:vsplit<CR>")
@@ -110,8 +110,6 @@ nmap("!", "gg=G``")
 
 -- Terminal and Compiler
 nmap("tl :vim.o.splitbelow<CR> :terminal", "++rows=7<CR>")
-nmap("<F5>", ":call CompileRunGcc()<CR>")
-nmap("<F6>", ":!cls<CR><CR>:call SSHCompileRunGcc()<CR>")
 
 -- Move Code
 map("n", "<C-J>", "<cmd>m .+1<cr>==")
@@ -128,6 +126,9 @@ map("n", "<Tab>sel", ":source ~/session/")
 -- Initial pwd
 nmap("\\", ":cd ~<CR>")
 
+-- Quick command
+nmap("<A-p>", ":lua vim.print(")
+
 -- Vim Script
 vim.cmd([[
 " Clipboard Linked
@@ -141,24 +142,6 @@ filetype indent on
 syntax on
 exec "nohlsearch"
 let g:python3_host_prog = 'C:\Users\user\AppData\Local\Programs\Python\Python311\python'
-
-func! CompileRunGcc()
-exec "w"
-if &filetype == 'c'
-exec "!gcc % -o %<"
-elseif &filetype == 'cpp'
-exec "silent !start cmd.exe /C g++ % -o %< && %< & pause"
-elseif &filetype == 'java'
-exec "!javac %"
-exec "!time java %<"
-elseif &filetype == 'sh'
-:!time bash %
-elseif &filetype == 'python'
-exec "silent !start cmd.exe /C python % & pause"
-elseif &filetype == 'html'
-exec "! chrome % &"
-endif
-endfunc
 ]])
 
 ----------------------------- Plugin --------------------------------
@@ -183,33 +166,31 @@ require("lazy").setup({ {
 
 -- Compiler
 
-vim.cmd([[
-	func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="!gcc % -o %<"
-	elseif &filetype == 'cpp'
-	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="! g++ % -o %< && %<"
-	elseif &filetype == 'java'
-	exec "!javac %"
-	exec "!time java %<"
-	elseif &filetype == 'sh'
-	:!time bash %
-	elseif &filetype == 'python'
-	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 python %
-	elseif &filetype == 'html'
-	exec "! chrome % &"
-	elseif &filetype == 'go'
-	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 go run %
-	elseif &filetype == 'dart'
-	:FlutterQuit
-	:FlutterRun
-	endif
-	endfunc
-]])
+-- vim.cmd([[
+-- 	func! CompileRun()
+-- 	exec "w"
+-- 	if &filetype == 'c'
+-- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="!gcc % -o %<"
+-- 	elseif &filetype == 'cpp'
+-- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="! g++ % -o %< && %<"
+-- 	elseif &filetype == 'java'
+-- 	exec "!javac %"
+-- 	exec "!time java %<"
+-- 	elseif &filetype == 'sh'
+-- 	:!time bash %
+-- 	elseif &filetype == 'python'
+-- 	exec "python % & pause"
+-- 	elseif &filetype == 'html'
+-- 	exec "! chrome % &"
+-- 	elseif &filetype == 'go'
+-- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 go run %
+-- 	elseif &filetype == 'dart'
+-- 	:FlutterQuit
+-- 	:FlutterRun
+-- 	endif
+-- 	endfunc
+-- ]])
 
--- floatTerm plugin
-nmap("tl", ":FloatermNew<CR>")
 -- lazygit plugin
 nmap("<SPACE>gg", ":LazyGit<CR>")
 -- MarkdownPreview plugin
