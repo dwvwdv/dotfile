@@ -1,10 +1,9 @@
 if (vim.loop.os_uname().sysname == 'Windows_NT')
 then
 	vim.cmd([[
-	set shell=powershell
-	set shellcmdflag=-command
-	set shellquote=\"
-	set shellxquote=
+	set shell=pwsh
+	set shellcmdflag=-c
+	set shellxquote="{"
 	]])
 end
 
