@@ -9,7 +9,7 @@ function Exec.Compiler()
 	elseif vim.fn.expand('%:e') == 'go' then
 		execCommand = '<cmd>TermExec cmd="go run %"<cr>'
 	elseif vim.fn.expand('%:e') == 'dart' then
-		execCommand = '<cmd>TermExec cmd="flutter run %"<cr>'
+		execCommand = '<cmd>FlutterRun<cr>'
 	else
 		execCommand = string.format('<cmd>echo "Sorry, your filetype is unknown for %s"<cr>', vim.fn.expand('%:t'))
 	end
@@ -23,6 +23,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.keymap.set("n", "<F5>", Exec.Compiler(), {silent = true, buffer = true})
 	end
 })
-vim.print('Exec模塊執行')
+-- vim.print('Exec模塊執行')
 
 return Exec
