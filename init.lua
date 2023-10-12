@@ -205,24 +205,3 @@ nmap("<Tab>ol", ":SymbolsOutline<CR>")
 -- flutter plugin
 nmap("<F2>", ":FlutterEmulators<CR>")
 
--- -- nvim-dap plugin
--- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr})
--- vim.keymap.set({"i", "n", "v"}, "<F10>", "<cmd>lua require'dap'.step_over()<CR>", {silent = true, noremap = true, buffer = bufnr})
--- vim.keymap.set({"i", "n", "v"}, "<F11>", "<cmd>lua require'dap'.step_into()<CR>", {silent = true, noremap = true, buffer = bufnr})
--- vim.keymap.set({"i", "n", "v"}, "<F12>", "<cmd>lua require'dap'.step_over()<CR>", {silent = true, noremap = true, buffer = bufnr})
--- vim.keymap.set({"i", "n", "v"}, "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", {silent = true, noremap = true, buffer = bufnr})
---
--- require('dap/python')
---
--- local dap = require('dap')
--- dap.configurations.python = {
---   {
--- 	type = 'python';
--- 	request = 'launch';
--- 	name = "Launch file";
--- 	program = "${file}";
--- 	pythonPath = function()
--- 	  return 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe'
--- 	end;
---   },
--- }
