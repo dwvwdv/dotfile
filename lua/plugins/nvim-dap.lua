@@ -12,6 +12,7 @@ return {
 		-- vim.keymap.set({"i", "n", "v"}, "<F12>", "<cmd>lua require'dap'.step_over()<CR>", {silent = true, noremap = true, buffer = bufnr}),
 		-- vim.keymap.set({"i", "n", "v"}, "<F9>", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", {silent = true, noremap = true, buffer = bufnr})
 		vim.keymap.set('n', '<C-F5>', function() require('dap').continue() end),
+		-- vim.keymap.set('n', '<S-F5>', function() require('dap').run() end),
 		vim.keymap.set('n', '<F10>', function() require('dap').step_over() end),
 		vim.keymap.set('n', '<F11>', function() require('dap').step_into() end),
 		vim.keymap.set('n', '<F12>', function() require('dap').step_out() end),
@@ -25,6 +26,7 @@ return {
 
 	},
 	config = function ()
+		vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
 		-- require('dap-python').setup('~/.virtualenvs/debugpy/Scripts/python')
 		require("dapui").setup()
 		require('dap-python').setup('C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe')
