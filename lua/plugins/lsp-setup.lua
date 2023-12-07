@@ -23,6 +23,15 @@ return {
 				tsserver = {
 					capabilities = capabilities
 				},
+				emmet_ls = {
+					capabilities = capabilities
+				},
+				angularls = {
+					capabilities = capabilities
+				},
+				cssls = {
+					capabilities = capabilities
+				}
 				-- html = {
 				-- 	capabilities = capabilities
 				-- },

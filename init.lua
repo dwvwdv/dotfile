@@ -159,36 +159,11 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup({ {
-	import = "plugins",
-} })
-
--- Compiler
-
--- vim.cmd([[
--- 	func! CompileRun()
--- 	exec "w"
--- 	if &filetype == 'c'
--- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="!gcc % -o %<"
--- 	elseif &filetype == 'cpp'
--- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 --cmd="! g++ % -o %< && %<"
--- 	elseif &filetype == 'java'
--- 	exec "!javac %"
--- 	exec "!time java %<"
--- 	elseif &filetype == 'sh'
--- 	:!time bash %
--- 	elseif &filetype == 'python'
--- 	exec "python % & pause"
--- 	elseif &filetype == 'html'
--- 	exec "! chrome % &"
--- 	elseif &filetype == 'go'
--- 	:FloatermNew --height=0.6 --width=0.4 --wintype=float --position=bottomright --autoclose=0 go run %
--- 	elseif &filetype == 'dart'
--- 	:FlutterQuit
--- 	:FlutterRun
--- 	endif
--- 	endfunc
--- ]])
+require("lazy").setup("plugins", {
+	change_detection = {
+		notify = false,
+	},
+})
 
 -- lazygit plugin
 nmap("<SPACE>gg", ":LazyGit<CR>")
@@ -204,4 +179,3 @@ nmap("tr", ":Mason<CR>")
 nmap("<Tab>ol", ":SymbolsOutline<CR>")
 -- flutter plugin
 nmap("<F2>", ":FlutterEmulators<CR>")
-
