@@ -143,9 +143,14 @@ exec "nohlsearch"
 let g:python3_host_prog = 'C:\Users\user\AppData\Local\Programs\Python\Python311\python'
 ]])
 
------------------------------ Plugin --------------------------------
-local range = 20
+-- Indent
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+-- g.markdown_folding = 1 -- enable markdown folding
 
+----------------------------- Plugin --------------------------------
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -164,18 +169,3 @@ require("lazy").setup("plugins", {
 		notify = false,
 	},
 })
-
--- lazygit plugin
-nmap("<SPACE>gg", ":LazyGit<CR>")
--- MarkdownPreview plugin
-nmap("<SPACE>m", "<Plug>MarkdownPreview")
--- ChatGPT plugin
-nmap('<SPACE>ai', ':ChatGPT<CR>')
-nmap('<SPACE>ae', ':ChatGPTEditWithInstructions<CR>')
-nmap('<SPACE>ac', ':ChatGPTCompleteCode<CR>')
--- mason plugin
-nmap("tr", ":Mason<CR>")
--- symbols-outline plugin
-nmap("<Tab>ol", ":SymbolsOutline<CR>")
--- flutter plugin
-nmap("<F2>", ":FlutterEmulators<CR>")

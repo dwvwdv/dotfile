@@ -1,5 +1,8 @@
 return {
 	'simrat39/symbols-outline.nvim',
+	keys = {
+		{"<Tab>ol", ":SymbolsOutline<CR>", desc = 'outline'}
+	},
 	config = function()
 		local symbols_outline_opts = {
 			highlight_hovered_item = true,
@@ -63,6 +66,7 @@ return {
 				Component = { icon = "", hl = "@function" },
 				Fragment = { icon = "", hl = "@constant" },
 			},
+
 		}
 		require("symbols-outline").setup(symbols_outline_opts)
 	end

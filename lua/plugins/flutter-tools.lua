@@ -5,6 +5,9 @@ return {
 		'nvim-lua/plenary.nvim',
 		'stevearc/dressing.nvim', -- optional for vim.ui.select
 	},
+	keys = {
+		{"<F2>", ":FlutterEmulators<CR>", desc = "select a emulators"}
+	},
 	config = function()
 		require("flutter-tools").setup{
 			ui = {
@@ -92,7 +95,7 @@ return {
 					enableSnippets = true,
 					updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
 				}
-			}
+			},
 		}
 	end
 }

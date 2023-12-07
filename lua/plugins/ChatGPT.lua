@@ -146,6 +146,11 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim"
 	},
+	keys = {
+		{'<SPACE>ai', ':ChatGPT<CR>'},
+		{'<SPACE>ae', ':ChatGPTEditWithInstructions<CR>'},
+		{'<SPACE>ac', ':ChatGPTCompleteCode<CR>'},
+	},
 	lazy = true,
 	enabled = false
 }
