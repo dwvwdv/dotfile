@@ -3,6 +3,9 @@ return {
 	opts = {},
 	-- Optional dependencies
 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	keys = {
+			{ "<tab>\\", "<cmd>Oil<cr>", desc = "Oil" },
+	},
 	config = function ()
 		require("oil").setup({
 			-- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
