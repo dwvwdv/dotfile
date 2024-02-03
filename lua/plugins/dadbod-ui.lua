@@ -11,7 +11,7 @@ return {
     'DBUIFindBuffer',
   },
 	keys = {
-		vim.keymap.set('n', '<Tab>db', '<Cmd>DBUIToggle<cr>'),
+		vim.keymap.set('n', '<leader>dtb', '<Cmd>DBUIToggle<cr>'),
 	},
   init = function()
     -- Your DBUI configuration

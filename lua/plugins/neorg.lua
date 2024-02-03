@@ -7,11 +7,12 @@ return {
 			load = {
 				["core.defaults"] = {}, -- Loads default behaviour
 				["core.concealer"] = {}, -- Adds pretty icons to your documents
-				["core.dirman"] = { -- Manages Neorg workspaces
+				["core.dirman"] = {  -- Manages Neorg workspaces
 					config = {
 						workspaces = {
 							notes = "~/notes",
-							MachineLearning = "~/MachineLearning"
+							MachineLearning = "~/MachineLearning",
+							Angular = "~/Angular"
 						},
 					},
 				},
