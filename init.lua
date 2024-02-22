@@ -15,10 +15,6 @@ local function nmap(shortcut, command)
 	map('n', shortcut, command)
 end
 
-local function imap(shortcut, command)
-	map('i', shortcut, command)
-end
-
 local function tmap(shortcut, command)
 	map('t', shortcut, command)
 end

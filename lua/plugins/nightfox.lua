@@ -56,6 +56,6 @@ return {
 		-- nordfox
 		-- carbonfox
 		-- terafox
-		vim.cmd("colorscheme carbonfox")
+		vim.cmd("colorscheme nightfox")
 	end
 }

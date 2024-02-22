@@ -12,5 +12,6 @@ return {
 		vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
 		vim.keymap.set('n', '<leader>fo', builtin.loclist, {})
 		vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})
+		vim.keymap.set('n', '[q', require('lib.QuickfixToggle').toggle_qf, {})
 	end
 }
