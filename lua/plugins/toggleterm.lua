@@ -5,7 +5,7 @@ return {
 		config = true,
 		lazy = false,
 		keys = {
-			{ "<C-\\>", "<cmd>ToggleTerm<cr>",          desc = "toggleterm" },
+			{ "<C-\\>", ":ToggleTerm<cr>",          desc = "toggleterm" },
 			{ "<F5>",   require('lib.Exec').Compiler(), desc = "Run Current File" },
 		}
 	},
