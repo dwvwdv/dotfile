@@ -15,7 +15,19 @@ return {
 					capabilities = capabilities
 				},
 				gopls = {
-					capabilities = capabilities
+					settings = {
+						gopls = {
+							hints = {
+								rangeVariableTypes = true,
+								parameterNames = true,
+								constantValues = true,
+								assignVariableTypes = true,
+								compositeLiteralFields = true,
+								compositeLiteralTypes = true,
+								functionTypeParameters = true,
+							},
+						},
+					},
 				},
 				csharp_ls = {
 					capabilities = capabilities

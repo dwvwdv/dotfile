@@ -3,7 +3,7 @@ return {
 	build = ":MasonUpdate", -- :MasonUpdate updates registry contents
 	event = "VeryLazy",
 	keys = {
-		{"tr", ":Mason<CR>" , desc = "mason interface."},
+		{ "tr", ":Mason<CR>", desc = "mason interface." },
 	},
 	config = function()
 		require("mason").setup({

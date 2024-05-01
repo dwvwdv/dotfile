@@ -1,4 +1,4 @@
-return{
+return {
 	'nordtheme/vim',
 	enabled = false,
 	config = function()
