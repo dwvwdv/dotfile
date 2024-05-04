@@ -2,6 +2,7 @@ return{
 	'neovim/nvim-lspconfig',
 	event = "VeryLazy",
 	config = function()
+		require'lspconfig'.nushell.setup{}
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 		vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
