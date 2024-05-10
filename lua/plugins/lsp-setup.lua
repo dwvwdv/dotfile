@@ -43,7 +43,10 @@ return {
 				},
 				cssls = {
 					capabilities = capabilities
-				}
+				},
+				-- nushell = {
+				-- 	capabilities = capabilities
+				-- }
 				-- html = {
 				-- 	capabilities = capabilities
 				-- },

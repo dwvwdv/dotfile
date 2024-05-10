@@ -3,8 +3,10 @@ return {
 	dependencies = {
 		'rcarriga/nvim-dap-ui',
 		'mfussenegger/nvim-dap-python',
+		'nvim-neotest/nvim-nio'
 	},
 	lazy = false,
+	enable = true,
 	keys = {
 		-- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr}),
 		-- vim.keymap.set({"i", "n", "v"}, "<F10>", "<cmd>lua require'dap'.step_over()<CR>", {silent = true, noremap = true, buffer = bufnr}),
