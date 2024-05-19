@@ -24,8 +24,8 @@ vim.g.mapleader = ' '
 
 -- Control File Enconding
 -- vim.o.encoding='utf-8'
-vim.o.termencoding = 'utf-8'
-vim.o.fileencoding = 'utf-8'
+-- vim.o.termencoding = 'utf-8'
+-- vim.o.fileencoding = 'utf-8'
 
 
 -- Basic Setting
