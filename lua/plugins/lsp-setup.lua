@@ -14,21 +14,22 @@ return {
 				pyright = {
 					capabilities = capabilities
 				},
-				gopls = {
-					settings = {
-						gopls = {
-							hints = {
-								rangeVariableTypes = true,
-								parameterNames = true,
-								constantValues = true,
-								assignVariableTypes = true,
-								compositeLiteralFields = true,
-								compositeLiteralTypes = true,
-								functionTypeParameters = true,
-							},
-						},
-					},
-				},
+				-- gopls = {
+				-- 	-- settings = {
+				-- 	-- 	gopls = {
+				-- 	-- 		hints = {
+				-- 	-- 			rangeVariableTypes = true,
+				-- 	-- 			parameterNames = true,
+				-- 	-- 			constantValues = true,
+				-- 	-- 			assignVariableTypes = true,
+				-- 	-- 			compositeLiteralFields = true,
+				-- 	-- 			compositeLiteralTypes = true,
+				-- 	-- 			functionTypeParameters = true,
+				-- 	-- 		},
+				-- 	-- 	},
+				-- 	-- },
+				-- 	capabilities = capabilities
+				-- },
 				csharp_ls = {
 					capabilities = capabilities
 				},
