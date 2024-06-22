@@ -7,6 +7,15 @@ then
 	]])
 end
 
+if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
+	local addr = "./godot.pipe"
+	if (vim.loop.os_uname().sysname == 'Windows_NT') then
+		-- Windows can't pipe so use localhost. Make sure this is configured in Godot
+		addr = "127.0.0.1:6004"
+	end
+	vim.fn.serverstart(addr)
+end
+
 local function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 end
