@@ -7,7 +7,9 @@ then
 	]])
 end
 
+-- Godot FileSystem Open
 if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
+	-- Exec Flags --server 127.0.0.1:6004 --remote-send "<esc>:n {file}<CR>:call cursor({line},{col})<CR>
 	local addr = "./godot.pipe"
 	if (vim.loop.os_uname().sysname == 'Windows_NT') then
 		-- Windows can't pipe so use localhost. Make sure this is configured in Godot
@@ -70,7 +72,7 @@ nmap("<SPACE>j", "20jzz")
 nmap("<SPACE>k", "20kzz")
 
 -- Neovim Config Modify
-nmap("<F8>", ":tabe<CR>:e $MYVIMRC<CR>")
+nmap("<Space><F8>", ":tabe<CR>:e $MYVIMRC<CR>")
 nmap("R", ":Lazy<CR>")
 
 -- Defalut Key Config Modify
@@ -174,3 +176,27 @@ require("lazy").setup("plugins", {
 		notify = false,
 	},
 })
+
+vim.api.nvim_create_user_command("ClearShada", function()
+	local shada_path = vim.fn.expand(vim.fn.stdpath('data') .. "/shada")
+	local files = vim.fn.glob(shada_path .. "/*", false, true)
+	local all_success = 0
+	for _, file in ipairs(files) do
+		local file_name = vim.fn.fnamemodify(file, ":t")
+		if file_name == "main.shada" then
+			-- skip your main.shada file
+			goto continue
+		end
+		local success = vim.fn.delete(file)
+		all_success = all_success + success
+		if success ~= 0 then
+			vim.notify("Couldn't delete file '" .. file_name .. "'", vim.log.levels.WARN)
+		end
+		::continue::
+	end
+	if all_success == 0 then
+		vim.print("Successfully deleted all temporary shada files")
+	end
+end,
+	{ desc = "Clears all the .tmp shada files" }
+)
