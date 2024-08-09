@@ -9,5 +9,5 @@ return {
 		-- {'<SPACE>ai', ':ChatGPT<CR>'},
 	},
 	-- lazy = true,
-	-- enabled = false
+	enabled = false
 }
