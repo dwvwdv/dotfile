@@ -29,7 +29,7 @@ local keys = {
   -- tabs --
   -- tabs: spawn+close
   { key = "t", mods = mod.SUPER, action = act.SpawnTab("DefaultDomain") },
-  { key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "WSL:Ubuntu" }) },
+  -- { key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "WSL:Ubuntu" }) },
   { key = "w", mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
 
   -- tabs: navigation
@@ -40,7 +40,7 @@ local keys = {
 
   -- window --
   -- spawn windows
-  { key = "n", mods = mod.SUPER, action = act.SpawnWindow },
+  -- { key = "n", mods = mod.SUPER, action = act.SpawnWindow },
 
   -- panes --
   -- panes: split panes
@@ -65,8 +65,8 @@ local keys = {
   { key = "w", mods = mod.SUPER, action = act.CloseCurrentPane({ confirm = false }) },
 
   -- panes: navigation
-  { key = "k", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Up") },
-  { key = "j", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Down") },
+  { key = "k", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Up") }, -- bug
+  { key = "j", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Down") }, -- bug
   { key = "h", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Left") },
   { key = "l", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Right") },
 

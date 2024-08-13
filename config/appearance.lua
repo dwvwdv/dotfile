@@ -12,6 +12,7 @@ return {
   -- color scheme
   -- colors = colors,
   color_scheme = "Gruvbox dark, medium (base16)",
+  -- color_scheme = "nord",
 
   -- background
   window_background_opacity = 1.00,
@@ -61,7 +62,7 @@ return {
   integrated_title_button_color = "auto",
   integrated_title_button_alignment = "Right",
   initial_cols = 120,
-  initial_rows = 24,
+  initial_rows = 30,
   window_padding = {
     left = 5,
     right = 10,
