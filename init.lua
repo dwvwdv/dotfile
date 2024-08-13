@@ -148,6 +148,7 @@ filetype indent on
 syntax on
 exec "nohlsearch"
 let g:python3_host_prog = 'C:\Users\user\AppData\Local\Programs\Python\Python311\python'
+set noswapfile
 ]])
 
 -- Indent
