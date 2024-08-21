@@ -4,6 +4,24 @@ return {
 	config = function()
 		require 'lspconfig'.gopls.setup {}
 		require 'lspconfig'.nushell.setup {}
+		require 'lspconfig'.pyright.setup {}
+		require 'lspconfig'.csharp_ls.setup {}
+		require 'lspconfig'.tsserver.setup {}
+		require 'lspconfig'.emmet_ls.setup {}
+		require 'lspconfig'.angularls.setup {}
+		require 'lspconfig'.cssls.setup {}
+
+		local gdscript_config = {
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = {},
+		}
+		if vim.fn.has("win32") == 1 then
+			-- Windows specific. Requires nmap installed (`winget install nmap`)
+			gdscript_config["cmd"] = { "ncat", "localhost", os.getenv("GDScript_Port") or "6005" }
+		end
+		require 'lspconfig'.gdscript.setup(gdscript_config)
+
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 		vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
