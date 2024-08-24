@@ -8,15 +8,7 @@ then
 end
 
 -- Godot FileSystem Open
-if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
-	-- Exec Flags --server 127.0.0.1:6004 --remote-send "<esc>:n {file}<CR>:call cursor({line},{col})<CR>
-	local addr = "./godot.pipe"
-	if (vim.loop.os_uname().sysname == 'Windows_NT') then
-		-- Windows can't pipe so use localhost. Make sure this is configured in Godot
-		addr = "127.0.0.1:6004"
-	end
-	vim.fn.serverstart(addr)
-end
+require('lib.GodotConnect').Check()
 
 local function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
@@ -201,3 +193,6 @@ vim.api.nvim_create_user_command("ClearShada", function()
 end,
 	{ desc = "Clears all the .tmp shada files" }
 )
+
+
+require('lib.GodotConnect')
