@@ -11,7 +11,10 @@ return {
 				enabled = true,
 			},
 			servers = {
-				tsserver = {
+				-- tsserver = {
+				-- 	capabilities = capabilities
+				-- },
+				ts_ls = {
 					capabilities = capabilities
 				},
 				emmet_ls = {

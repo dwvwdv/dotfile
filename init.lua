@@ -102,6 +102,8 @@ nmap("<A-k>", ":bprevious<CR>")
 nmap("<A-h>", ":bfirst<CR>")
 nmap("<A-l>", ":blast<CR>")
 nmap("<A-c>", ":%bd|e#<CR>")
+nmap("<C-M-k>", ":tabe<CR>")
+nmap("<C-M-y>", ":tabe<CR>")
 
 -- Auto Indent
 nmap("!", "gg=G``")
