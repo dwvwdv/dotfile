@@ -26,6 +26,9 @@ return {
 				cssls = {
 					capabilities = capabilities
 				},
+				csharp_ls = {
+					capabilities = capabilities
+				},
 			}
 		})
 	end

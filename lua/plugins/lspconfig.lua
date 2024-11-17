@@ -5,7 +5,7 @@ return {
 		require 'lspconfig'.gopls.setup {}
 		require 'lspconfig'.nushell.setup {}
 		require 'lspconfig'.pyright.setup {}
-		require 'lspconfig'.csharp_ls.setup {}
+		-- require 'lspconfig'.csharp_ls.setup {}
 		-- require 'lspconfig'.tsserver.setup {}
 		-- require 'lspconfig'.emmet_ls.setup {}
 		-- require 'lspconfig'.angularls.setup {}

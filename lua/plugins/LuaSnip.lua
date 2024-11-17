@@ -1,8 +1,9 @@
 return {
 	"L3MON4D3/LuaSnip",
+  dependencies = { "rafamadriz/friendly-snippets" },
 	-- follow latest release.
-	version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	config = function()
+	version = "1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release) config = function()
+	config = function ()
 		-- luasnip plugin
 		local ls = require("luasnip")
 		local snip = ls.snippet
@@ -34,8 +35,6 @@ return {
 		-- keymap("i", "<c-K>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 		-- keymap("s", "<c-K>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 	end
-
-
 
 	-- install jsregexp (optional!).
 	-- build = "make install_jsregexp"

@@ -73,7 +73,7 @@ nmap("t", "<nop>")
 nmap("T", "<nop>")
 nmap("K", "<nop>")
 nmap("W", "5w")
-nmap("S", ":w<CR>")
+nmap("S", ":w ++p<CR>")
 nmap("Q", ":q<CR>")
 
 -- Tarminal Defalut Config Modify
