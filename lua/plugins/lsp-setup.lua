@@ -7,31 +7,26 @@ return {
 	},
 	config = function()
 		require('lsp-setup').setup({
-			inlay_hits = {
-				enabled = true,
+			capabilities = vim.lsp.protocol.make_client_capabilities(),
+			inlay_hints = {
+				enabled = false,
+				highlight = 'Comment',
 			},
 			servers = {
-				-- tsserver = {
-				-- 	capabilities = capabilities
-				-- },
-				ts_ls = {
-					capabilities = capabilities
-				},
-				emmet_ls = {
-					capabilities = capabilities
-				},
-				angularls = {
-					capabilities = capabilities
-				},
-				cssls = {
-					capabilities = capabilities
-				},
-				csharp_ls = {
-					capabilities = capabilities
-				},
-			}
+				-- tsserver = { },
+				ts_ls = {},
+				emmet_ls = {},
+				angularls = {},
+				cssls = {},
+				-- csharp_ls = {},
+				omnisharp = {},
+				sqls = {},
+			},
+			on_attach = function(client, bufnr)
+				-- Support custom the on_attach function for global
+				-- Formatting on save as default
+				-- require('lsp-setup.utils').format_on_save(client)
+			end,
 		})
-	end
+	end,
 }
-
-

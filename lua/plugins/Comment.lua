@@ -3,7 +3,7 @@ return {
 	opts = {
 		-- add any options here
 	},
-	lazy = false,
+	lazy = true,
 	config = function()
 		require('Comment').setup({
 				---Add a space b/w comment and the line

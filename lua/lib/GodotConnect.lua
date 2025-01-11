@@ -1,5 +1,14 @@
 local function start_godot_pipe()
-	if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
+	-- if vim.fn.filereadable(vim.fn.getcwd() .. "../project.godot") == 1 then
+	-- 	local addr = "./godot.pipe"
+	-- 	if (vim.loop.os_uname().sysname == 'Windows_NT') then
+	-- 		addr = "127.0.0.1:6004"
+	-- 	end
+	-- 	vim.fn.serverstart(addr)
+	-- end
+	if vim.fn.expand('%:e') == "gd" or
+		 vim.fn.expand('%:e') == "cs" or
+		 vim.fn.expand('%:e') == "godot" then
 		local addr = "./godot.pipe"
 		if (vim.loop.os_uname().sysname == 'Windows_NT') then
 			addr = "127.0.0.1:6004"

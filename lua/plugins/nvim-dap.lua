@@ -5,7 +5,7 @@ return {
 		'mfussenegger/nvim-dap-python',
 		'nvim-neotest/nvim-nio'
 	},
-	lazy = false,
+	lazy = true,
 	enable = true,
 	keys = {
 		-- vim.keymap.set({"i", "n", "v"}, "<C-F5>", "<cmd>lua require'dap'.continue()<CR>", {silent = true, noremap = true, buffer = bufnr}),
