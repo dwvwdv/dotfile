@@ -1,0 +1,2801 @@
+ls
+cd
+cd code
+ls
+cd CSharp\
+ls
+cd cliPractice\
+cd
+ls
+exit
+ls
+exir
+exit
+ls
+cd .local\
+ls
+cd bin\
+ls
+cd ../
+cd share\
+ls
+cd
+ls
+cd .config\
+ls
+nu.config-path
+$nu.config-path
+vim $nu.config-path
+curl google.com
+cls
+clear
+http get github.com/dwvwdv
+http get https://github.com/dwvwdv
+cls
+http get https://github.com/dwvwdv/lazyrhythm
+http get https://github.com/dwvwdv/lazyrhythm | sort-by license
+http get https://github.com/dwvwdv/lazyrhythm | get license
+http get https://api.github.com/dwvwdv/lazyrhythm | get license
+http get https://api.github.com/repos/dwvwdv/lazyrhythm | get license
+vim $nu.config-path
+ll
+exit
+vim
+exit
+vim $nu.config-path
+exit
+ls
+cls
+vim $nu.config-path
+ls
+cat package.json
+ls
+cls
+exit
+nu
+vim $nu.config-path
+nu --lsp
+echo 'hi'
+exit
+vim
+exit
+vim
+exit
+vim
+exit
+vim 
+exit
+vim
+exit
+vim
+exit
+vim
+exit
+vim
+exit
+http get https://api.github.com/repos/dwvwdv/lazyrhythm
+http get https://api.github.com/repos/dwvwdv/lazyrhythm | get owner
+http get https://api.github.com/repos/dwvwdv/readme.md | get owner
+http get https://api.github.com/repos/dwvwdv/dwvwdv.md | get owner
+http get https://api.github.com/repos/dwvwdv/dwvwdv | get owner
+vim
+ls
+nu --lsp
+ls
+vim
+vim $nu.config-path
+vim 
+vim
+ls
+exit
+cls
+vim $nu.config-path
+cd code
+ls
+cd Angular\
+ls
+cd lazyrhythm\
+ls
+vim
+vim $nu.config-path
+code
+vim $nu.config-path
+exit
+vim $nu.config-path
+ls
+exit
+ls
+exit
+vim $nu.config-path
+exit
+ls
+where size > 4kb
+ls | where size > 4kb
+ls | where type = dir
+ls | where type == dir
+ps
+top
+ps -aus
+ps -aux
+ps
+ps | where cpu > 10
+date
+date now
+date now | date to-table 
+sys
+ipconfig
+ifconfig
+sys
+sys | get host.sessions.name
+ls
+sys | get host.sessions.name | each { |it| ^echo $it }
+sys | get host.sessions.name
+git
+cls
+sys | get host.sessions.name | each { |it| ^echo $it }
+sys | get host.sessions.name
+sys | get host.sessions.name | each { |it| ^echo it }
+sys | get host.sessions.name | each { |a| ^echo $a }
+sys | get host.sessions.name | each { |a| ^echo $b }
+ls | length
+sleep 1sec
+let x = 5
+x
+echo $x
+x = x + 1
+x = $x + 1
+sys | get host.sessions.name | each { |it| ^echo $it }
+> ls | enumerate | each { |it| $"Number ($it.index) is size ($it.item.size)" }
+ls | enumerate
+ls | enumerate | where type == symlink
+ls | enumerate | where type == 'symlink'
+ls | where type == dir
+ls | where type == symlink
+ls | where type == symlink | enumrate
+ls | where type == symlink | enumerate
+ls | where type == symlink | enumerate 
+ls *.md
+ls
+ls *.json
+ls
+cls
+choco install starship
+exiy
+exit
+exit
+mkdir -p ~/.config && touch ~/.config/starship.toml
+vim ~\.config\starship.toml
+ls
+exit
+ls
+exit
+vim $nu.config-path
+exit
+ls
+cd code
+kls
+ls
+cd Angular\
+ls
+cd lazyrhythm\
+ls
+cd ../
+cd Flutter\
+ls
+cd lazy_sync\
+ls
+exit
+ls
+exit
+ls
+cd code
+ls
+vim default.nix
+ls
+history
+cls
+ls
+cd DevOps\
+ls
+cd Actions\
+ls
+lazygit.exe 
+ls
+lazygit.exe 
+vim
+history
+ls
+exit
+vim $nu.config-path
+exit
+exit
+vim
+exit
+vim
+ls
+clear
+cd code
+l
+ll
+cls
+vim $nu.config-path
+vim ~/.config/starship.toml
+exit
+vim ~/.config/starship.toml
+exit
+ls
+ls | where size > 0b
+ls | where modified > 2
+ls | where modified > 2 hours age
+ls | where modified > date
+date
+ls | where modified > date now
+ls | where modified > two weeks
+help where
+ls | where modified >= (date now) - 2wk
+ls | where modified >= (date now) - 1m
+ls | where modified >= (date now) - 1mo
+help where
+ls | where modified >= (date now) - 8wk
+ls | where modified >= (date now) - 1wk
+ls | where modified >= (date now) - 1d
+help where
+exit
+ls | where modified >= (date now) - 1day
+ls | where modified >= (date now) - 1month
+ls | where modified >= (date now) - 1mon
+ls | where modified >= (date now) - 1m
+ls | where modified >= (date now) - 1day
+cd code
+ls
+cd SQL\
+ls
+cd
+ls
+cd code
+ls
+cd Flutter\
+ls
+cd
+exit
+exit
+cd code 
+cd Flutter\
+ls
+cd flutter_create\
+cd ../
+cd lazy_sync\
+ls
+cd lib
+ls
+vim main.dart
+cd
+vim
+ls
+exit
+ls
+date
+ls | where size > 0b
+ls | where name == "s*"
+exot
+exit
+vim
+vim $nu.config-path
+exit
+vim
+vim $nu.config-path
+cd code
+ls
+vim
+vim $nu.config-path
+vim
+tg
+vim
+cd Python\
+ls
+mkdir lazyPushConfig
+cd lazyPushConfig\
+python main.py
+vim main.py
+exit
+python main.py
+vim $nu.config-path
+exit
+vim $nu.config-path
+exit
+exit
+cd C:\Users\user\code\Godot\Brackeys
+;s
+ls
+vim .gitignore
+git status
+git init
+ls
+ls -l
+cd .git\
+cd ../
+ls -a
+git status
+git remote add origin https://github.com/dwvwdv/Godot-Practice.git
+exit
+vim
+ls
+exit
+vim $nu.config-path
+ls
+cd code
+ls
+cd Godot\l
+cd Godot
+ls
+cd Brackeys\
+ls
+exit
+ls
+cd code
+ls
+vim a.txt
+rm  a.txt
+ls
+cd Angular\
+ls
+cd lazyrhythm\
+cd
+ls
+exit
+vim
+vi
+exit
+vim
+cd Desktop\DataBox\
+ls
+cd 300Learn\
+ls
+cd 320Note\
+ls
+vim 
+cd coe
+cd Desktop\DataBox\
+ls
+cd 300Learn\320Note\
+ls
+vim  temp.md
+ls
+ls -a
+ls -liash
+ls -liah
+cls
+ls
+vim  temp.md
+exit
+ls
+ssh master
+vim
+ls
+git status
+exit
+scoop update scoop
+scoop bucket ;ostg
+scoop bucket list
+scoop list
+choco list 
+choco list -lo
+vim
+choco upgrade neovim
+vim
+choco upgrade neovim
+exit
+vim
+cls
+vim
+ls
+exit
+cls
+ls
+exit
+vim
+cls
+vim
+cls
+cd node_modules\
+ls
+cd ../
+ls
+ssh master
+exit
+ssh master
+exit
+choco install wezterm -y
+exit
+nushell
+exit
+nu
+exit
+ls
+cls
+exit
+ls
+exit
+vim ~/.wezterm.lua
+exit
+cd code
+ls
+cd Angular\
+ls
+cd SPA-Routing\
+ls
+cd ../
+cd lazyrhythm\
+ls
+cd code
+sl
+ls
+vim ~/.wezterm.lua
+cd code
+ls
+cd Angular\
+ls
+cd lazyrhythm\
+ls
+exit
+ls
+exit
+exit
+ls
+exit
+vim
+lazygit.exe 
+exit
+vim
+cl
+scls
+cls
+cd C:\Users\user\Desktop\github\nvim
+ls
+rm *
+ls
+vim
+cp ~\.wezterm.lua .\
+ls
+vim
+lazygit.exe 
+cd ../
+cd dotfile\
+ls
+git checkout master
+ls
+exit
+ssh master
+exit
+ssh master
+vim
+cls
+vim
+cd Desktop\
+ls
+cd DataBox\
+ls
+cd 300
+cd 300Learn\
+ls
+cd 320Note\
+ls
+exit
+ls
+exit
+pwsh
+exit
+choco install lf
+exit
+lf
+nvim lf
+lf
+lf --help
+lf -doc
+ls
+lf --help
+lf -memprofile
+vim $nu.config-path
+exir
+exit
+lf
+vim $nu.config-path
+exit
+vim $nu.config-path
+exit
+mkdir -p ~/.config/nushell/completions
+lf
+mkdir -p ~/.config/lf
+man mkdir
+cls
+mkdir ~\.config\lf
+curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/lfrc.example -o ~/.config/lf/lfrc
+ls
+lf
+exit
+ls
+cd
+ls
+lf
+ls
+cls
+config enve
+config env
+vim $nu.config-path
+exit
+vim
+exit
+config env
+vim $nu.config-path
+config env
+lf
+vim $nu.config-path
+config env
+exit
+config env
+vim $nu.config-path
+exir
+exit
+config env
+vim $nu.config-path
+lf
+ls
+vim $nu.config-path
+lf
+cd .config\
+ls
+cd lf
+ls
+rm lfrc
+cd ../
+ls
+vim $nu.config-path
+ls
+lf 
+config env
+exir
+exit
+lf
+config env
+cls
+exit
+vim $nu.config-path
+exit
+lf
+exit
+cd code
+ls
+lf
+lf config
+lf -config
+lf
+cd ../
+lf
+ls
+lf
+exit
+vim $nu.config-path
+exit
+ls
+cd code
+ls
+lf
+lf -print-last-dir ~/
+lf -print-last-dir 
+lf -print-last-dir ~
+lf -print-last-dir ~/
+lf -last-dir-path ~
+lf -last-dir-path ~\Desktop\DataBox\
+lf
+lf --help
+lf -last-dir-path ~\Desktop\DataBox\
+lf --help
+lf
+cd
+lf
+vim $nu.config-path
+config env
+lf
+ls
+cls
+lf
+ls
+cd
+ls
+exit
+ls
+l
+lf
+ssh master
+ls
+exit
+exit
+lf
+vim ~\.ssh\config
+ssh phone
+vim ~\.ssh\config
+ssh phone
+ls
+lf
+ssh master
+exit
+ssh phone
+exit
+ssh master
+ls
+python main.py
+lf
+ls
+cls
+lfl
+lf
+ls
+cls
+dotnet run
+cls
+exit
+dotnet run
+exit
+dotnet run
+lf
+ls
+exit
+lf
+ls
+lf
+vim $nu.config-path
+exit
+ls
+exit
+ls
+cls
+exit
+ls
+exit
+vim main.go
+vim
+exit
+ls
+cd codel
+exit
+lf
+exit
+lf
+cd
+ls
+exit
+lf
+exit
+ls
+vim statistics.md
+exit
+lf
+exit
+ls
+exit
+lf
+exit
+ls
+exit
+lf
+ls
+cls
+lf
+exit
+ls
+cls
+ls
+mkdir example_gin
+cd example_gin\
+git clone https://github.com/gin-gonic/examples.git
+cd examples\
+ls
+cd ../
+ls
+go get -u github.com/gin-gonic/gin
+ls
+cd examples\
+git clone https://github.com/it-ebooks-0/geektime-books
+ls
+go get -u github.com/gin-gonic/gin
+ls
+cd template\
+ls
+vim main.go
+ls
+cd ../
+ls
+cd secure-web-app\
+ls
+vim main.go
+ls
+cd ../
+ls
+cd basic\
+exit
+lf
+exit
+curl -X POST \
+*/
+exit
+tsc --showConfig
+ls
+lsc --showConfig
+tsc --showConfig
+exit 
+lf
+exit
+vim
+cls
+vim
+ng serve
+exit
+cls
+ls
+vim main.go
+ls
+vim main.go
+ls
+cls
+git init
+ls
+cd ../
+ls
+mv lazythythm\ lazythythm_backend\
+ls
+cd LazyStory\
+exit
+lf
+exit
+lf
+ls
+lf
+go get -u github.com/gin-gonic/gin
+exit
+go run main.go
+go mod init github.com/dwvwdv/lazyrhythm_backend
+go mod tidy
+exit
+ls
+rm example_gin\
+rm example_gin\ --recursive 
+ls
+vim main.go
+ls
+lazygit.exe 
+lf
+ls
+git remote add origin https://github.com/dwvwdv/lazyrhythm_backend.git
+ls
+lazygit.exe 
+cd
+ssh master
+exit
+ssh master
+exit
+lf
+exi
+exit
+ls
+lf
+vim
+cls
+exit
+:q
+:q!
+exit
+ssh master
+ls
+exit
+exit
+nslookup test.lazyrhythm.com
+exit
+ssh master
+ls
+git log
+git status
+lazygit.exe 
+exit
+lf
+exit
+lf
+ls
+exit
+cd ../
+ls
+exit
+vim $nu.config-path
+vim
+cd ~
+cd C:\Users\user\Desktop\github\dotfile
+git pull origin master
+exit
+vim
+ls
+rm *
+rm *.*
+vim
+ls
+vim
+ls
+lazygit.exe 
+lf
+cd AppData\
+lf
+cp ~\AppData\Roaming\nushell\ .
+cp --recursive ~\AppData\Roaming\nushell\ .
+ls
+vim .gitignore
+vim nushell\env.nu
+lazygit.exe 
+ls
+vim README.md
+exit
+exit
+lf
+cd code
+ls
+cd Python\
+ls
+cd pushMyDotFile\
+ls
+python main.py
+pwd
+ls
+exit
+python main.py
+in.py
+exit
+python main.py
+exit
+python main.py
+ls
+pwsh mkdir test
+exit
+python main.py
+ls
+exit
+python main.py
+vim main.py
+python main.py
+exit
+vim
+ls
+python main.py
+vim main.py
+ls
+cd ../
+ls
+rm lazyPushConfig\
+cd lazyPushConfig\
+cd ../
+cd pushMyDotFile\
+ls
+python main.py
+exit
+vim main.py
+python main.py
+lf
+exit
+lf
+exit
+ls
+lazygit.exe 
+exit
+lf
+exit
+ls
+mkdir use_gin
+cd use_gin\
+ls
+go get -u github.com/gin-gonic/gin
+go mod init practice
+ls
+cat go.mod
+ls -a
+ls -l
+cls
+ls
+go get -u github.com/gin-gonic/gin
+ls
+cat go.mod
+ls
+cat go.sum
+cls
+ls
+vim main.go
+go run main.go
+exit
+go run main.go
+exit
+lf
+exit
+dig test.lazyrhythm.com
+ping http://test.lazrhythm.com/
+exit
+vim
+cls
+vim
+exit
+lf
+cls
+ls
+vim
+exit
+exit
+cd Desktop\
+cd DataBox\
+ls
+cd 300Learn\
+ls
+cd 320Note\
+ls
+vim temp.md
+exit
+lf
+exit
+vim
+exit
+ncat
+ncat localhost:6005
+exit
+lf
+exit
+vim
+exit
+netstat
+lf
+exit
+lf
+exit
+vim
+lf
+cls
+lf
+nvm list
+exit
+lf
+vim
+lf
+vim
+ls
+git clone https://github.com/CyC2018/Markdown-Resume.git
+ls
+cd Desktop\
+cd github\
+ls
+git clone git clone https://github.com/mszep/pandoc_resume
+cd pandoc_resume
+git clone https://github.com/mszep/pandoc_resume
+cd pandoc_resume
+lf
+ls
+cd ../
+cd
+cd Desktop\github\
+ls
+git clone https://github.com/CyC2018/Markdown-Resume.git
+ls
+cd mar
+cd Markdown-Resume\
+ls
+vim markdown/resume.md 
+ls
+exit
+lzd
+lazydocker
+lf
+ls
+lf
+cd deskop
+cd Desktop\
+ls
+cd github\
+ls
+cd Markdown-Resume\
+ls
+pandoc Resume.md -o Resume.pdf --from markdown
+pandoc Resume.md -o Resume.pdf
+cls
+ls
+lf
+ls
+exit
+lf
+cd AppData\
+lf
+cls
+vim
+exit
+lf
+cls
+exit
+ssh master
+ls
+ssh master
+exit
+vim
+exit
+ls
+git clon https://github.com/dwvwdv/blog.git
+git clone https://github.com/dwvwdv/blog.git
+ls
+cd blog\
+ls
+cd src\
+ls
+cd ls
+cd app\
+ls
+cd (article)\
+ls
+cd (article)\
+cd (article)
+cd \Dylan\
+ls
+cd ../
+ls
+cd ../
+exit
+cd blog
+ls
+cd src\
+ls
+vim
+exit
+lf
+exit
+cd Desktop\
+cd github\
+ls
+vim blog
+exit
+ls
+exit
+vim
+exit
+git log
+vim tsconfig.json
+exit
+lf
+exit
+ls
+vim
+cls
+vim
+vls
+cls
+vls
+cls
+vim
+vls
+vim
+exit
+npm run dev
+exit
+pnpm run dev
+exit
+npm install
+gh auth login
+exit
+ls
+gh api \
+gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28"  /rate_limit
+exit
+vim
+npm run dev
+exit
+curl -u Ov23litkupn2LZTiEAwL:57ed2d4a68d170293c87405905c46afac12c4aca -I https://api.github.com/meta
+vim
+exit
+env
+exit
+nu
+help
+man env
+helpp
+help
+ps
+help
+ps | where cpu > 10
+ps | where cpu > 5
+ls
+exit
+vim
+exit
+vim
+exit
+vim
+exit
+$env
+$env | table
+$env | table -e
+$env | table
+$env.OPENAI_API_KEY
+$env.OPENAI_API_KEY = ''
+exit
+$env.OPENAI_API_KEY
+vim $nu.config-path
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+$env.OPENAI_API_KEYt
+$env.OPENAI_API_KEYe
+exit
+$env.OPENAI_API_KEYe
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEYt
+exit
+$env.OPENAI_API_KEYt
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+$env.OPENAI_API_KEY
+exit
+vim
+$env.OPENAI_API_KEY
+exit
+vim
+cls
+vim
+exit
+cls
+ls
+vim
+history 
+$env.OPENAI_API_KEY
+vim ~/.wezterm.lua
+cd deskop
+ls
+cd Desktop\
+ls
+cd github\
+ls
+git clone https://github.com/QianSong1/wezterm-config.git
+cd ~
+pwd
+cd .config\
+ls
+exit
+exit
+ls
+cd code
+ls
+lf
+exit
+ls
+lf
+exit
+ls
+exit
+vim ~/.config/
+ls
+vim ~\.config\wezterm\
+exit
+vim
+exit
+ls
+vim ~\.config\wezterm\
+cd Desktop\
+git clone https://github.com/dwvwdv/dotfile.git
+ls
+git checkout master
+git branch
+git branch -a
+git checkout nushell
+exit
+vim ~\.config\wezterm\
+cls
+exit
+vim ~\.config\wezterm\
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+lf
+exit
+ls
+cls
+ls
+cls
+ls
+clear
+exit
+exit
+exit
+vim
+lf
+vim
+exit
+mf
+ls
+vim
+ls
+exit
+ls
+lf
+exit
+ls
+exit
+ls
+exit
+exit
+ls
+pwd
+exit
+lf
+vim
+ls
+exit
+ls
+lf
+exit
+ls
+exit
+lf
+exit
+go run main.go
+exit
+ls
+cd src
+ls
+ng g c login
+ls
+cd app
+ls
+mkdir component
+ng g c login
+ls
+cd component\
+ls
+ng g c login
+exit
+vim angular.json
+lf
+cd code
+ls
+cd Angular\
+ls
+ng new supabase-angular --routing false --style css
+npm install @supabase/supabase-js
+ls
+npm uninstall @supabase/supabase-js
+ls
+cd supabase-angular\
+npm install @supabase/supabase-js
+ls
+ls -liah
+ls -l
+get README.md
+ls -l | get README.md
+ls -l | get create
+ls -l | get created
+ls -l | get name created
+ls -l | where 3min
+ls -l | where >= 3min
+ls -l | where size >= 1kb
+ls -l | where name = *.json
+ls -l | where name like json
+$dark_theme
+$in
+$light_theme
+db
+ls
+cd src\
+ls
+cd ../
+ng g s supabase
+ls
+exit
+ng g c auth
+exit
+ng g c account
+exit
+ng g c avatar
+exit
+ls
+vim environment.ts
+ng serve
+exit
+ng serve
+exit
+ls
+vim
+ls
+vim
+exit
+cls
+vim
+vim src\index.html
+vim
+exit
+vim
+exit
+exit
+ls
+vim
+ls
+vim src\index.html
+vim
+exit
+vim
+vim src\index.html
+cls
+cd ../
+ls
+vim index.html
+vim src\index.html
+vim
+vim src\index.html
+vim
+exit
+vim
+exit
+vim
+ls
+exit
+vim angular.json
+exit
+vim angular.json
+exit
+lf
+exit
+vim
+exit
+vim
+nvim --listen 127.0.0.1:6004
+vim
+cd code
+ls
+cd Godot\
+ls
+cd Brackeys\
+ls
+vim project.godot
+cls
+vim project.godot
+cls
+vim
+vim project.godot
+vim
+cd ../
+vim
+exit
+lf
+exit
+ls
+mkdir textToSpeech
+ls
+cd textToSpeech\
+ls
+exit
+ls
+vim
+pip install -U openai-whisper
+ls
+pip install TTS
+python -m pip install --upgrade pip
+pip install TTS
+ls
+cd textToSpeech\
+ls
+pip install TTS
+exit
+pip install TTS
+exit
+lf
+exit
+pip install pyttsx3
+ls
+python main.py
+vim main.py
+cls
+vim main.py
+cls
+vim
+exit
+lf
+ls
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+vim ~\.config\starship.toml
+ls
+vim ~\.config\wezterm\
+ls
+vim ~\.config\wezterm\
+vim
+make
+exit
+cmake
+exit
+echo $env
+echo $env | grep OPENAI_KEY
+echo $env | find OPENAI_KEY
+ls
+lf
+fg
+bg
+exit
+vim
+cls
+ls
+vim
+cls
+lf
+rm node_modules\
+rm -r  node_modules\
+lf
+cls
+exit
+vim .gitconfig
+ng
+ls
+vim package-lock.json
+exit
+ls
+ng
+cls
+lf
+ls
+lf
+cls
+lf
+exit
+vim
+cls
+mkdir playground
+cd playground\
+ng update
+npm uninstall -g @angular/cli
+npm install -g @angular/cli@latest
+ng version
+npm install -g npm@latest
+ng version
+npm update -g npm
+ng version
+ls
+npm update -g ng
+ng version
+exit
+ls
+cd ../
+ls
+cd Python\
+ls
+cd textToSpeech\
+ls
+git init
+exit
+vim main.py
+npm update -g
+lf
+exit
+ls
+ng version
+nvm
+nmv list
+nvm list
+nvm install lts
+nvm use lts
+ls
+exr
+ng version
+exit
+ng version
+exit
+ls
+vim
+vim main.py
+echo $env | find OPENAI_API_KEY
+vim $env
+vim $nu.config-path
+vim
+vim main.py
+vim
+cls
+exit
+echo $env | find ANT
+echo $env | find ANTHROPIC_API_KEY
+echo $env | grep ANTHROPIC_API_KEY
+echo $env | find API_KEY
+echo $env | find .*API_KEY
+$env
+$env.ANTHROPIC_API_KEY
+$env.OPENAI_API_KEY
+exit
+$env
+$env.ANTHROPIC_API_KEY
+exit
+vim
+exit
+msf
+musicfox
+ls
+cls
+ls
+vim ~\.config\wezterm\wezterm.lua
+exit
+lf
+exit
+ls
+exit
+exit
+exit
+ls
+cls
+ls
+exit
+exit
+ls
+exit
+cls
+ls
+exit
+exit
+wezterm show-keys --lua
+wezterm show-keys --lua | find 'k'
+wezterm show-keys --lua | find "key = 'k'"
+wezterm show-keys --lua | find "key = 'l'"
+exit
+exit
+exit
+cls
+wezterm show-keys --lua | find "key = 'k'"
+cls
+wezterm show-keys --lua | find "key = 'k'"
+exit
+exit
+exit
+ls
+exit
+ls
+exit
+ls
+clear 
+exit
+ls
+exit
+lf
+keybindings list
+keybindings list -e -d
+keybindings list -modifiers
+keybindings list --modifiers
+exit
+vim
+vim $nu.config-path
+exit
+vim $nu.config-path
+exit
+vim
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+exit
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim
+cls
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim ~\.config\wezterm\wezterm.lua
+cls
+vim
+ls
+vim
+exit
+cls
+ls
+exit
+ls
+vim read
+ls
+rm read
+vim README.md
+lf
+exit
+cd tracking_money\
+ls
+vim lib\main.dart
+flutter pub get
+flutter clean
+flutter pub get
+exit
+vim lib\main.dart
+flutter pub get
+exit
+ssh master
+vim lib\main.dart
+exit
+exit
+lf
+exit
+ls
+cd time_bank\
+ls
+cd lib
+ls
+vim main.dart
+ls
+cd time_bank\
+git status
+git init
+git add .
+lzg
+flutter pub get
+exit
+git remote add origin https://github.com/dwvwdv/time_bank.git
+git push -u origin master
+exit
+ls
+cd lib\
+ls
+cls
+vim main.dart
+cls
+vim
+lzg
+lazygit
+vim
+cls
+vim
+lf
+ls
+vim
+ls
+exit
+vim 
+cls
+ls
+vim angular.json
+exit
+vim instruction.md
+ls
+cd ../
+ls
+cd lazyrhythm\
+ls
+vim instruction.md
+exir
+exit
+lf
+vim
+exit
+vim
+vim project.godot
+exit
+vim project.godot
+vim
+ls
+vim test.cs
+rm test.cs
+vim project.godot
+exit
+lf
+exit
+vim project.godot
+exit
+lf
+vim
+exit
+vim
+exit
+vim
+cls
+vim
+exit
+vim ~\.config\wezterm\wezterm.lua
+cls
+ls
+vim
+exit
+vim
+exit
+musicfox
+vim
+git log
+git remote add origin https://github.com/dwvwdv/godot_chat.git
+exit
+vim
+exit
+lazygit
+exit
+vim $nu.config-path
+exit
+l
+exit
+lazygit
+exit
+vim instruction.md
+cls
+lazygit
+vim instruction.md
+exit
+lf
+exit
+cd C:\Dylan\discordo_Windows_X64
+ls
+discordo.exe
+.\discordo.exe
+exit
+scoop bucket add vvxrtues https://github.com/vvirtues/bucket
+scoop install discordo
+go install github.com/jorgerojas26/lazysql@latest
+exit
+lazysql
+ls
+go install github.com/jorgerojas26/lazysql@latest
+go --version
+go -v
+go version
+scoop list
+gobang
+choco list -lo
+choco upgrade go
+exit
+choco upgrade go
+go version
+exit
+go install github.com/jorgerojas26/lazysql@latest
+lazysql
+netstat -ano
+ipconfig
+lazysql
+exit
+lzd
+vim $nu.config-path
+exit
+lzs
+lazysql
+ls
+lzs
+discordo.exe
+scoop bucket add vvxrtues https://github.com/vvirtues/bucket
+scoop install discordo
+scoop cache rm discordo
+scoop install discordo
+exit
+cd C:\Dylan\discordo_Windows_X64
+.\discordo.exe
+exit
+go uninstall
+go help
+which lazygit
+go env
+go env GOBIN
+go env GOPSTH
+go env GOPATH
+$ go install github.com/tomekz/coincap-tui@latest
+go install github.com/tomekz/coincap-tui@latest
+coincap-tui
+rm -f $(which dlv)
+which coincap-tui
+rm C:\Users\user\go\bin\coincap-tui.exe
+coincap-tui
+go install github.com/cointop-sh/cointop@latest
+cointop
+exit
+lzs
+exit
+msf
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim
+ls
+ld
+ls
+lzs
+cd ~
+lzs
+pwd
+cd code
+lzs
+cd~
+cd ~
+vim instruction.md
+cd ../
+ls
+cd ../
+cd Flutter\
+ls
+ssh master
+exit
+lf
+exit
+ls
+top
+cointop
+cd ~
+ls
+cd Contacts\ls
+cd code
+ls
+cd Golang\
+ls
+cd ~
+cd md
+ls
+mkdir golang
+cd golang\
+ls
+go get -u github.com/cointop-sh/cointop
+go install github.com/mrcnserkan/crypto@latest
+crypto
+vim ~\.config\wezterm\wezterm.lua
+exoy
+lzs
+cls
+lzs
+exit
+musicfox
+exit
+ping lighting.lazyrhythm.com
+ssh master
+exit
+ssh master
+exit
+exit
+D:
+cd code
+ls
+cd Angular\
+ls
+cd ../
+ls
+vim WebNative
+mkdir WebNative
+ls
+rm WebNative
+mkdir WebNative
+ls
+cd WebNative\
+cd ~
+ls
+cls
+ls
+cd code
+ls
+mkdir Secret
+cd Secret\
+ls
+vim google_api_by_abab46abab.txt
+vim
+lzs
+cd ~
+lzs
+exit
+vim index.html
+cls
+cd ../
+ls
+cd Angular\
+ld
+ls
+vim neumorphism\
+cd neumorphism\
+ls
+cd src\
+ls
+exit
+vim index.html
+cd ../
+ls
+cd ../
+ls
+cd ../
+ls
+cd Flutter\
+ls
+flutter create --org com.lazyrhythm epub_together
+flutter upgrade
+rm epub_together\
+rm --recursive epub_together\
+flutter create --org com.lazyrhythm epub_together
+ls
+cd epub_together\
+ls
+exit
+cd ~
+ls
+git clone https://github.com/Mamasodikov/cosmos_epub.git
+ls
+cd cosmos_epub\
+ls
+cd example\
+ls
+cd lib\
+ls
+which flutter
+exit
+vim main.dart
+avdmanager create avd -n my_x86_64_device -k "system-images;android-31;google_apis;x86_64"
+sdkmanager "system-images;android-31;google_apis;x86_64"
+avdmanager create avd -n my_x86_64_device -k "system-images;android-31;google_apis;x86_64"
+exit
+vim
+exit
+lf
+exit
+exit
+vim
+cls
+exit
+vim lib\main.dart
+lf
+exit
+】flutter pub get
+flutter
+flutter pub get
+\exit
+exit
+flutter pub get
+exit
+vim main.dart
+cls
+cd ../
+rm --recursive epub_together\
+exit
+rm --recursive epub_together\
+ls
+flutter create --org com.lazyrhythm epub_together
+cd epub_together\
+emulator 
+ls
+cd lib\
+ls
+vim main.dart
+exit
+msf
+vim $nu.config-path
+msfx
+exit
+vim
+ld
+mkdir SQL
+ls
+cd sql
+ls -a
+mkdir connection
+mv connectODB.py connection\
+mv dbui connection\
+ls
+vim create.sql
+exit
+lf
+exitt
+exit
+lzs
+exit
+msfx
+exit
+cls
+vim
+exit
+ls
+cls
+lf
+cd ../
+;ls
+ls
+cd CSharp\
+ls
+mkdir aspDocs
+cd aspDocs\
+ls
+cls
+git clone https://github.com/dotnet/AspNetCore.Docs.git
+ls
+ls -a
+cd AspNetCore.Docs\
+ls
+cd aspnetcore\
+ls
+cd fundamentals\
+ls
+cd websockets\
+ls
+cd samples\
+ls
+cd 8.x\
+ls
+cd WebSocketsSample\
+ls
+dotnet run
+dotnet --version
+scoop list
+choco list 
+choco list -lo
+exit
+choco upgrade dotnet
+exit
+dotnet --version
+pwd
+exit
+exit
+dotnet --version
+choco list -lo
+choco uninstall dotnet
+exit
+exit
+dotnet
+dotnet --version
+exit
+dotnet --version
+cd C:\Users\user\code\CSharp\aspDocs\AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\8.x\WebSocketsSample
+ls
+dotnet run
+vim WebSocketsSample.csproj
+vim
+vo,
+vim Program.cs
+dotnet run
+ls
+dotnet run
+exit
+vim Program.cs
+dotnet tool install --global csharp-ls
+exit
+cd C:\Users\user\code\CSharp\aspDocs\AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\8.x\WebSocketsSample
+ls
+vim Program.cs
+vim
+msbuild -version
+exit
+msbuild -version
+cd C:\Users\user\code\CSharp\aspDocs\AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\8.x\WebSocketsSample
+vim Program.cs
+msbuild -version
+exit
+msbuild -version
+cd C:\Users\user\code\CSharp\aspDocs\AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\8.x\WebSocketsSample
+csharp-ls --version
+exit
+ls
+dotnet build
+exit
+vim Program.cs
+ls
+dotnet build
+exit
+ls
+cd ../
+ls
+dotnet new console -o dtItem
+ls
+cd dtItem\
+ls
+vim Program.cs
+:ls
+ls
+cls
+ls
+dotnet run
+ls
+dotnet build
+ls
+dotnet run
+vim
+exit
+cd C:\Users\user\code\CSharp\aspDocs\AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\8.x\WebSocketsSample
+ls
+vim Program.cs
+cd ~
+ls
+cd code/
+ls
+cd CSharp\
+ls
+cd cliPractice\
+ls
+msbuild
+exit
+vim Program.cs
+cd ../
+lsc
+ls
+cd asp
+lls
+cd ls
+cd aspDocs\
+ls
+cd AspNetCore.Docs\aspnetcore\fundamentals\websockets\samples\
+ls
+vim
+vim Program.cs
+dotnet --list-sdks
+ls
+msbuild -version
+dotnet tool update -g csharp-ls
+vim
+dotnet tool update -g csharp-ls
+vim Program.cs
+csharp-ls --version
+dotnet tool uninstall -g csharp-ls
+exot
+exit
+vim Program.cs
+dotnet tool uninstall -g csharp-ls
+dotnet tool install -g csharp-ls --version 0.15.0
+msbuild -version
+csharp-ls --version
+where csharp-ls
+find / -name csharp-ls
+ls
+dotnet --info
+exit
+vim
+vim Program.cs
+exit
+ls
+cd aspnetcore\fundamentals\websockets\
+ls
+cd samples\
+ls
+cd 8.x\
+ls
+exit
+cd WebSocketsSample\
+ls
+cls
+where edit
+where notepad
+notepad
+which flutter
+which notepad
+which git
+pwd
+exit
+lf
+exit
+echo %YAZI_FILE_ONE%
+cmd
+file --versoin
+file --version
+file
+cmd
+exit
+scoop install ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+scoop install yazi
+yazi
+vim $nu.config-path
+exit
+lf
+cls
+lf
+vls
+cls
+lf
+cls
+exit
+lzg
+cls
+pwd
+lzg
+cls
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+exit
+lf
+cls
+exit
+lf
+exir
+exit
+lf
+exir
+exit
+lf
+ls
+lf
+cls
+vim
+lf
+vim
+lf
+exit
+lf
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+ls
+lf
+exit
+ls
+pwd
+date
+date now 
+vim
+vim ~\.config\wezterm\wezterm.lua
+exit
+sesl
+exit
+vim $nu.config-path
+vim ~\.config\wezterm\wezterm.lua
+lf
+exit
+exit
+cls
+exit
+lf
+msf
+msfx
+exit
+lf
+msfx
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+exot
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+lf
+vim ~\.config\wezterm\wezterm.lua
+cls
+exit
+vim
+exit
+ls
+cls
+vim
+cls
+lf
+ls
+pwd
+ls
+lf
+exit
+lf
+exit
+lf
+exit
+cd `code\Godot\Original Plan\`
+ls
+cd asset-import\
+ls
+vim project.godot
+cls
+vim
+cls
+exit
+lf
+cd code\Godot\Original_Plan\
+ls
+cd asset-import\
+ls
+cd ../../
+ls
+cd Original_Plan\
+ls
+git init
+git add .
+git status
+git add -a
+git add
+lzg
+exit
+vim project.godot
+ls
+cd ../
+ls
+cd Original_Plan\
+ls
+yazi
+ls
+pwd
+exit
+cd
+cls
+lzs
+cd code
+;s
+ls
+cd Python\
+;s
+ls
+pip install sapabase
+exit
+vim
+ls
+pip install supabase
+exit
+vim
+python main.py
+exit
+python main.py
+exit
+python main.py
+exit
+python main.py
+pip install apscheduler
+ls
+exit
+vim wake_supabase\main.py
+python main.py
+exit
+lzs
+exit
+vim record.md
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+exir
+exit
+ssh master
+cls
+exit
+ls
+pip isntall posting
+pip install posting
+vim
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=GEMINI_API_KEY" \
+-H 'Content-Type: application/json' \
+-X POST \
+cls
+posting
+wsl
+vim
+cls
+exit
+posting
+cls
+posting
+vim
+exit
+cls
+pwd
+ls
+posting
+lf
+yazi
+cls
+posting.exe 
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+posting.exe 
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+posting.exe 
+exit
+vim $nu.config-path
+exit
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+chcp
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+posting.exe 
+chcp
+cls
+exit
+posting.exe 
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+posting.exe 
+vim C:\Users\user\.local\share\posting\default\gemini-api-test.posting.yaml
+cls
+exit
+cls
+vim
+cls
+cd code
+ls
+vim
+yazi
+exit
+yazi
+exit
+yazi
+exit
+vim $nu.config-path
+exit
+vim ~\.config\yazi\yazi.toml
+yazi
+ls
+pip freeze > requirements.txt
+exit
+pip freeze > requirements.txt
+ls
+pip freeze > requirements.txt
+exit
+pip freeze > requirements.txt
+exit
+date now 
+exit
+dir
+exit
+ls
+pip freeze > requirements.txt
+exit
+pip freeze
+cls
+docker build -t supabase-wake .
+docker version
+docker build -t supabase-wake .
+lzd
+exit
+exit
+docker
+docker version
+which git
+which docker
+scoop update docker
+docker version
+exit
+docker build -t supabase-wake .
+exit
+cd code\Python\wake_supabase
+ls
+docker build -t supabase-wake .
+ls
+docker version
+Start-Service docker
+dockerd
+exit
+ls
+docker build -t supabase-wake .
+docker version
+exit
+yazi
+exit
+docker build -t supabase-wake .
+ls
+docker build -t supabase-wake .
+cd code\Python\wake_supabase
+ls
+docker build -t supabase-wake .
+ls
+docker build --platform linux/amd64 -t supabase-wake .
+docker version
+vim Dockerfile
+docker build -t supabase-wake .
+docker system prune -a
+docker build -t supabase-wake .
+docker build -t supabase-wake .
+exit
+ls
+docker build -t supabase-wake .
+ls
+pwd
+cd code
+l
+ls
+cd Vue\
+ls
+echo "helo" > 1.txt
+cls
+cd cd ../
+cd ../
+cd Python\
+ls
+cd telegramBot\
+ls
+pip freeze
+pip freeze > requirements.txt
+ls
+cd code
+ls
+cd Python\
+ls
+cd telegramBot\
+ls
+pip freeze > requirements.txt
+ls
+pwsh
+exit
+exit
+ls
+mkdir tst
+ls
+rm tst\
+ls
+exit
+exit
+vim Dockerfile
+lzd
+exit
+yazi
+exit
+cd code\Python\wake_supabase
+ls
+cd ../
+ls
+scp .\wake_supabase\ master:~/files
+scp .\wake_supabase master:~/files/
+scp -r .\wake_supabase master:~/files/
+ssh master
+vim
+exit
+ssh master
+exit
+vim
+exit
+vim
+cls
+vim
+cls
+which dockererd
+which dockererc
+which docker
+which dockererd
+which dockerd
+exit
+sh master
+ssh master
+vim
+cls
+ls
+git clone -b v1.66.0 --depth 1 --shallow-submodules https://github.com/grpc/grpc
+ls
+cd grpc
+ls
+vim README.md
+ls
+cd ../
+ls
+python -m pip install --upgrade pip
+pip install grpcio
+python -m pip install grpcio-tools
+cd grpc/examples/python/helloworld
+ls
+python greeter_client.py
+ls
+exit
+ls
+python greeter_client.py
+exit
+python greeter_client.py
+python -m grpc_tools.protoc -I../../protos --python_out=. --pyi_out=. --grpc_python_out=. ../../protos/helloworld.proto
+python greeter_client.py
+exit
+python route_guide_client.py
+cls
+python route_guide_client.py
+cls
+python route_guide_client.py
+cls
+python route_guide_client.py
+python route_guide_client.pyde_client.py
+python route_guide_client.py
+ls
+cd ~
+cd code\Godot\Original_Plan\asset-import\.godot\
+cd ../
+vim
+ssh master
+exit
+ls
+cd ~
+lzs
+exit
+ssh master
+lzs
+cd ~
+lzs
+exit
+vim
+exit
+cd ~
+lzs
+exit
+cd md
+ls
+lf
+exit
+cd md
+ls
+cd angular\
+ls
+vim route.md
+exit
+posting
+ls
+lf
+cls
+exit
+nvim --version
+exit
+vim
+exit
+vim
+exit
+vim
+which dart
+which flutter
+which go
+which rust
+which rs
+rust
+which dotnet
+which scoop
+scoop list
+which yazi
+exit
+vim
+lzs
+exit
+ls
+ssh master
+ls
+vim
+ssh master
+exit
+vim project.godot
+exit
+vim greeter_server.py
+exit
+ping lighting.lazyrhythm.com
+exit
+ls
+cd ~
+ls
+lzs
+vim
+cd zettelkasten\
+ls
+vim .
+exit
+scp test.epub master:~/files/
+cd ../
+cd assets\
+scp test.epub master:~/files/
+scp test2.epub master:~/files/
+ping lighting.lazyrhythm.com
+vim
+exit
+ssh master
+exit
+exit
+lf
+exit
+cls
+cd ~
+vim
+cls
+make
+cd code
+cd ../
+cd Desktop\
+cd github\
+ls
+git clone https://github.com/zk-org/zk-nvim.git
+git clone https://github.com/zk-org/zk.git
+cd zk\
+ls
+make
+go version
+gcc --version
+vim
+exit
+exit
+ls
+exit
+exit
+ping lighting.lazyrhythm.com
+ssh master
+exit
+ls
+lzs
+exit
+curl lighting.lazyrhythm.com
+exit
+ssh master
+curl lighting.lazyrhythm.com
+ssh master
+exit
+which flutter
+ssh master
+scp master:~.models/v1-5-pruned-emaonly-fp16.safetensors \tools\
+scp master:~/models/v1-5-pruned-emaonly-fp16.safetensors \tools\
+exit
+ssh master
+exit
+exit
+scoop install rclone
+rclone
+rclone --version
+vim
+cd desktop
+cd scripts
+mkdir scripts
+cd scripts
+ls
+vim run_pcloud_mount.bat
+rclone config
+ls
+rclone mount pcloud:/Test X: --vfs-cache-mode writes
+rclone lsd pcloud-pc:
+exit
+rclone mount pcloud:/Test X: --vfs-cache-mode writes
+rclone 
+rclone config
+top
+vim ~\.config\wezterm\wezterm.lua
+exit
+cls
+rclone mount pcloud:/Test X: --vfs-cache-mode writes
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim ~\.config\wezterm\wezterm.lua
+exit
+vim $nu.config-path
+rclone mount pcloud:/Test X: --vfs-cache-mode writes
+exit
+ls
+rclone authorize
+rclone authorize "pcloud"
+rclone lsd pcloud-pc:
+rclone lsd pcloud:
+rclone authorize "pcloud"
+rclone --version
+ssh master
+exit
+ssh master
+exit
+ssh master
+curl ighting.lazyrhythm.com
+curl lighting.lazyrhythm.com
+ssh master
+ls
+exir
+exit
+ls
+cd Desktop\
+ls
+cd dotfile\
+ls
+vim
+vim $nu.config-path
